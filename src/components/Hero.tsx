@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Facebook, Instagram, Linkedin } from 'lucide-react'; // Ensure all icons are correctly imported
 import { fadeIn, slideIn } from '../utils/animations';

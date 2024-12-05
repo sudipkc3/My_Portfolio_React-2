@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import React from 'react';
 import { Calendar, Clock } from 'lucide-react';
 import BlogContent from './BlogContent';
 import { fadeIn } from '../../utils/animations';

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
+import React from 'react';
 
 interface TabButtonProps {
   active: boolean;

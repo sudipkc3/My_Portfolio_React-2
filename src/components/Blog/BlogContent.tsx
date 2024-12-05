@@ -1,3 +1,4 @@
+import React from 'react';
 import Markdown from 'markdown-to-jsx';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../utils/animations';
