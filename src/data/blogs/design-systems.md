@@ -1,11 +1,11 @@
 ---
-title: "Creating Effective Design Systems"
-date: "Mar 15, 2024"
-author: "Sudip KC"
-readTime: "5 min read"
-category: "Design"
-excerpt: "Learn how to build and maintain a scalable design system that improves workflow and consistency."
-coverImage: "https://images.unsplash.com/photo-1561070791-2526d30994b5"
+title: How i got my interest into UI/UX Design 
+date: Mar 15, 2024
+author: Sudip KC
+readTime: 5 min read
+category: Design
+excerpt: UI/UX design .
+coverImage: https://images.unsplash.com/photo-1635405050330-b0824eb1bf26?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 ---
 
 # Creating Effective Design Systems

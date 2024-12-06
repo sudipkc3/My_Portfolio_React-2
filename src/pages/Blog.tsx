@@ -6,6 +6,21 @@ import AnimatedText from '../components/shared/AnimatedText';
 import BlogCard from '../components/Blog/BlogCard';
 import { getBlogPost } from '../utils/blogUtils';
 
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/works', label: 'Works' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/#about', label: 'About' },
+  { href: '/#contact', label: 'Contact' },
+];
+
+const isActiveLink = (href: string) => {
+  if (href.startsWith('/#')) {
+    return location.pathname === '/' && location.hash === href.substring(1);
+  }
+  return location.pathname === href;
+};
+
 interface BlogPost {
   id: string;
   title: string;
@@ -21,41 +36,29 @@ export default function Blog() {
 
   useEffect(() => {
     const loadPosts = async () => {
-      const slugs = ['design-systems', 'react-performance', 'ux-research'];
+      const slugs = ['design-systems', 'react-performance', 'ux-research', 'Starting-UIUX-Carrer'];
       const loadedPosts = await Promise.all(
         slugs.map(async (slug) => {
-          try {
-            const post = await getBlogPost(slug);
-            if (post) {
-              const { frontmatter } = post;
-              console.log(`Loaded blog post: ${slug}`);
-              return {
-                id: slug,
-                title: frontmatter.title,
-                excerpt: frontmatter.excerpt,
-                image: frontmatter.coverImage,
-                date: frontmatter.date,
-                readTime: frontmatter.readTime,
-                category: frontmatter.category
-              };
-            } else {
-              console.error(`Blog post not found: ${slug}`);
-              return null;
-            }
-          } catch (error) {
-            console.error(`Error loading blog post: ${slug}`, error);
-            return null;
-          }
+          const { frontmatter } = await getBlogPost(slug);
+          return {
+            id: slug,
+            title: frontmatter.title,
+            excerpt: frontmatter.excerpt,
+            image: frontmatter.coverImage,
+            date: frontmatter.date,
+            readTime: frontmatter.readTime,
+            category: frontmatter.category
+          };
         })
       );
-      setPosts(loadedPosts.filter(post => post !== null) as BlogPost[]);
+      setPosts(loadedPosts);
     };
 
     loadPosts();
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-20 pb-20">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-20">
       <motion.div 
         className="container mx-auto px-6 py-12"
         variants={staggerContainer}
@@ -68,7 +71,7 @@ export default function Blog() {
         >
           <AnimatedText 
             text="Latest Blog Posts"
-            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 pb-2"
+            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-8 pt-8 overflow-visible"
           />
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Thoughts, tutorials, and insights about design and development

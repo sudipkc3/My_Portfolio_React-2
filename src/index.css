@@ -70,3 +70,11 @@ body {
 .dark .custom-scrollbar::-webkit-scrollbar-thumb {
   border-color: theme('colors.gray.800');
 }
+
+.toggle-button {
+  @apply p-2 rounded-full transition-colors;
+}
+
+.toggle-button:hover {
+  @apply bg-gray-100 dark:bg-gray-800;
+}

@@ -10,7 +10,18 @@ export default function Header() {
   const location = useLocation();
 
   useEffect(() => {
-    document.documentElement.classList.toggle('dark', isDarkMode);
+    const darkModePreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setIsDarkMode(darkModePreference);
+  }, []);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    root.classList.add('transition-colors', 'duration-500');
+    if (isDarkMode) {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
   }, [isDarkMode]);
 
   const scrollToSection = (sectionId: string) => {
@@ -54,7 +65,7 @@ export default function Header() {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="text-2xl font-bold text-gray-900 dark:text-white"
           >
-            Sudip KC
+            SUDIP KC
           </Link>
 
           <ul className="hidden md:flex items-center space-x-8">
@@ -86,7 +97,7 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <motion.button
               onClick={() => setIsDarkMode(!isDarkMode)}
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="toggle-button"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
