@@ -36,7 +36,7 @@ export default function Blog() {
 
   useEffect(() => {
     const loadPosts = async () => {
-      const slugs = ['design-systems', 'react-performance', 'ux-research', 'Starting-UIUX-Carrer'];
+      const slugs = [ 'Basics-Of-UIUX', 'Starting-Journey', ];
       const loadedPosts = await Promise.all(
         slugs.map(async (slug) => {
           const { frontmatter } = await getBlogPost(slug);
