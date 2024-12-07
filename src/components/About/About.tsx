@@ -121,7 +121,7 @@ export default function About() {
             variants={fadeIn('right')}
           >
             <img
-              src='./src/Images/ME.jpg'
+              src='/Images/ME.jpg'
               alt="Sudip KC"
               className="relative rounded-xl border shadow-2xl w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
             />

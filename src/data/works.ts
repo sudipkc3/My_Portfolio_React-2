@@ -12,7 +12,7 @@ export const works: Work[] = [
     id: 'landing-page',
     title: 'Cook it Yourself',
     description: 'The Recipe Sharing Website is a web-based platform where users can explore, share, and discover a wide variety of recipes. Users can add their own recipes, rate recipes shared by others, and bookmark their favorite ones. The website also includes an advanced search functionality, a recommendation system based on user preferences and ingredients, and nutritional value calculations for added recipes.',
-    image: "../../src/data/Work_Images/CIY Page.png",
+    image: "/Work_Images/CIY Page.png",
     link: 'https://recipe-recommender-five.vercel.app/',
     tags: ['UI/UX', 'Figma', 'Design','React', 'Tailwind CSS', 'WebApp']
   },
@@ -20,7 +20,7 @@ export const works: Work[] = [
     id: 'Wireframe for Responsive Website',
     title: 'Wireframe for Responsive Website',
     description: "This wireframe outlines the design and layout for a responsive website tailored to the company's needs. It serves as a visual blueprint, showcasing the placement of key elements like navigation, content sections, and interactive features. The wireframe ensures a seamless user experience across various devices, emphasizing usability, accessibility, and alignment with the company's goals.",
-    image: '../../src/data/Work_Images/Wireframe.jpg',
+    image: '/Work_Images/Wireframe.jpg',
     link: '#',
     tags: ['UI/UX', 'Figma', 'Wireframe']
   },
@@ -28,7 +28,7 @@ export const works: Work[] = [
     id: 'green-thread',
     title: 'Green Thread',
     description: 'An e-commerce platform for eco-friendly fashion with a vibrant and intuitive interface.',
-    image: '../../src/data/Work_Images/Shopping.png',
+    image: '/Work_Images/Shopping.png',
     link: "https://www.figma.com/design/4QQtllO9qaDFtZAArVcgoL/Wireframing-for-responsive-Website",
     tags: ['Wireframe', 'E-commerce', 'UI/UX', 'Figma', 'Design', 'Responsive']
   },
@@ -36,7 +36,7 @@ export const works: Work[] = [
     id: 'crypto-trading',
     title: 'Crypto Trading',
     description: 'An iOS app crafted for cryptocurrency trading with a sleek and user-friendly interface.',
-    image: '../../src/data/Work_Images/Trading.png',
+    image: '/Work_Images/Trading.png',
     link: 'https://www.figma.com/design/psqf0KtNhpW36KCy0KWvra/Untitled',
     tags: ['iOS', 'Crypto', 'Trading']
   },

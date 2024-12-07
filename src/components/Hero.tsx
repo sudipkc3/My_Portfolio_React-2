@@ -184,7 +184,7 @@ export default function Hero() {
               }}
             >
               <motion.img
-                src="./src/Images/Container right.jpg"
+                src="/Images/Container right.jpg"
                 alt="Profile"
                 className="rounded-full w-full h-full object-cover border-4 border-white dark:border-gray-800 shadow-xl"
                 whileHover={{ scale: 1.05 }}
