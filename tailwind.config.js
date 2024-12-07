@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-const plugin = require('tailwindcss/plugin')
+// Use `import` instead of `require`
+import plugin from 'tailwindcss/plugin';
+import typography from '@tailwindcss/typography';
 
 export default {
   content: [
@@ -9,5 +10,5 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/typography")], 
-}
+  plugins: [typography], // Use the imported plugin
+};
