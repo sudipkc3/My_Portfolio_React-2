@@ -23,8 +23,9 @@ export default function ProjectCard({ image, title, description, link, index }: 
       <motion.img
         src={image}
         alt={title}
-        className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:blur-sm"
+        className="w-full h-full object-cover transition-all duration-500"
         layoutId={`project-image-${index}`}
+        whileHover={{ scale: 1.1, filter: 'blur(2px)' }}
       />
       <motion.div 
         className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-all duration-300 p-6 flex flex-col justify-between"

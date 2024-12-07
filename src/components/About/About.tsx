@@ -110,7 +110,7 @@ export default function About() {
   return (
     <section id="about" className="py-20 bg-gray-50 dark:bg-gray-800">
       <motion.div 
-        className="container mx-auto px-6 flex justify-center items-center"
+        className="container mx-auto px-16 flex justify-center items-center"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"

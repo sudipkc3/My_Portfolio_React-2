@@ -129,7 +129,7 @@ export default function Hero() {
                   custom={index} 
                   variants={letterAnimation}
                   whileHover={{ y: -5, transition: { type: "spring", stiffness: 300 } }}
-                  style={{ display: 'inline-block' }}
+                  style={{ display: 'inline-block', WebkitTextStroke: '1px #ff004f' }}
                 >
                   {char === " " ? "\u00A0" : char}
                 </motion.span>

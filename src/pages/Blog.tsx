@@ -58,20 +58,20 @@ export default function Blog() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-20">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-2">
       <motion.div 
-        className="container mx-auto px-6 py-12"
+        className="container mx-auto px-6 py-6"
         variants={staggerContainer}
         initial="hidden"
         animate="visible"
       >
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-8"
           variants={fadeIn('up')}
         >
           <AnimatedText 
             text="Latest Blog Posts"
-            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-8 pt-8 overflow-visible"
+            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 pt-6 overflow-visible"
           />
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Thoughts, tutorials, and insights about design and development

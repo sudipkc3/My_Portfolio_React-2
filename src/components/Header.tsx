@@ -67,7 +67,7 @@ export default function Header() {
             onClick={() => handleNavClick('/')}
             className="text-2xl font-bold text-gray-900 dark:text-white"
           >
-            SUDIP KC
+            <img src="src/Images/Logo.png" alt="Logo" className="h-8 w-auto" />
           </Link>
 
           <ul className="hidden md:flex items-center space-x-8">
