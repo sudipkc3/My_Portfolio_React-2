@@ -1,18 +1,15 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, Moon, Sun, X } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTheme } from '../contexts/ThemeContext';
 
 export default function Header() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { isDarkMode, toggleTheme } = useTheme();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const location = useLocation();
-
-  useEffect(() => {
-    const darkModePreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setIsDarkMode(darkModePreference);
-  }, []);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const root = document.documentElement;
@@ -24,20 +21,25 @@ export default function Header() {
     }
   }, [isDarkMode]);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsSidebarOpen(false);
-    }
-  };
-
   const handleNavClick = (href: string) => {
+    setIsSidebarOpen(false);
+    
     if (href === '/') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (location.pathname === '/') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        navigate('/');
+      }
     } else if (href.startsWith('/#')) {
       const sectionId = href.substring(2);
-      scrollToSection(sectionId);
+      if (location.pathname === '/') {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        navigate('/', { state: { scrollTo: sectionId } });
+      }
     }
   };
 
@@ -62,7 +64,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link 
             to="/" 
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            onClick={() => handleNavClick('/')}
             className="text-2xl font-bold text-gray-900 dark:text-white"
           >
             SUDIP KC
@@ -83,6 +85,7 @@ export default function Header() {
                 ) : (
                   <Link
                     to={link.href}
+                    onClick={() => link.href === '/' && handleNavClick('/')}
                     className={`text-gray-600 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-500 transition-colors ${
                       isActiveLink(link.href) ? 'text-pink-600 dark:text-pink-500' : ''
                     }`}
@@ -96,9 +99,9 @@ export default function Header() {
 
           <div className="flex items-center space-x-4">
             <motion.button
-              onClick={() => setIsDarkMode(!isDarkMode)}
-              className="toggle-button"
-              whileHover={{ scale: 1.1 }}
+              onClick={toggleTheme}
+              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              whileHover={{ scale: 1.1, rotate: 180 }}
               whileTap={{ scale: 0.9 }}
             >
               {isDarkMode ? (
@@ -163,7 +166,10 @@ export default function Header() {
                   ) : (
                     <Link
                       to={link.href}
-                      onClick={() => setIsSidebarOpen(false)}
+                      onClick={() => {
+                        setIsSidebarOpen(false);
+                        if (link.href === '/') handleNavClick('/');
+                      }}
                       className={`block text-gray-600 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-500 transition-colors ${
                         isActiveLink(link.href) ? 'text-pink-600 dark:text-pink-500' : ''
                       }`}
