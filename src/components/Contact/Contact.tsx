@@ -1,4 +1,3 @@
-import React from 'react';
 import { Mail, Phone, Github, Facebook, Instagram, Linkedin } from 'lucide-react';
 import ContactForm from './ContactForm';
 import { motion } from 'framer-motion';

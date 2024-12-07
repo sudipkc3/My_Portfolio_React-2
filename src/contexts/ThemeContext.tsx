@@ -1,4 +1,3 @@
-import React from 'react';
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 
 interface ThemeContextType {

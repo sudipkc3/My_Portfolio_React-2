@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { staggerContainer, fadeIn } from '../utils/animations';
 import AnimatedText from '../components/shared/AnimatedText';

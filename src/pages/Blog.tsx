@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { staggerContainer, fadeIn } from '../utils/animations';
@@ -6,20 +5,6 @@ import AnimatedText from '../components/shared/AnimatedText';
 import BlogCard from '../components/Blog/BlogCard';
 import { getBlogPost } from '../utils/blogUtils';
 
-const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/works', label: 'Works' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/#about', label: 'About' },
-  { href: '/#contact', label: 'Contact' },
-];
-
-const isActiveLink = (href: string) => {
-  if (href.startsWith('/#')) {
-    return location.pathname === '/' && location.hash === href.substring(1);
-  }
-  return location.pathname === href;
-};
 
 interface BlogPost {
   id: string;

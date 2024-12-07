@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Palette, Code, Layout,FileCode, Presentation, } from 'lucide-react';
