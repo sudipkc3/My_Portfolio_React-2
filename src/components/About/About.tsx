@@ -109,15 +109,15 @@ export default function About() {
   return (
     <section id="about" className="py-20 bg-gray-50 dark:bg-gray-800">
       <motion.div 
-        className="container mx-auto px-16 flex justify-center items-center"
+        className="container mx-auto px-4 md:px-16 flex justify-center items-center"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <motion.div 
-            className="relative border h-[800px] w-full md:w-[500px] flex justify-center items-center rounded-xl"
+            className="relative border h-[500px] md:h-[800px] w-full md:w-[500px] flex justify-center items-center rounded-xl"
             variants={fadeIn('right')}
           >
             <img
@@ -137,7 +137,7 @@ export default function About() {
             />
             
             <motion.p 
-              className="text-lg text-gray-600 dark:text-gray-400"
+              className="text-lg text-gray-600 dark:text-gray-400 text-justify"
               variants={fadeIn('up', 0.2)}
             >
               Hello, my name is Sudip KC, and I am from Nepal. I am currently pursuing a degree
