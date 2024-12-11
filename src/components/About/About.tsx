@@ -115,7 +115,7 @@ export default function About() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <motion.div 
             className="relative border h-[500px] md:h-[800px] w-full md:w-[500px] flex justify-center items-center rounded-xl"
             variants={fadeIn('right')}
