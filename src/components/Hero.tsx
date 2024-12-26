@@ -26,66 +26,61 @@ export default function Hero() {
     "UI/UX Designer",
     "Visual Designer",
     "Web Designer",
-  ];
-
-  const programmerTitles = [
-    "Programmer",
     "Frontend Developer",
-    "Technical Writer",
-    "Documentation Specialist",
-    "Proposal Writer",
   ];
 
-  const [currentTitle, setCurrentTitle] = useState(titles[0]);
-  const [currentProgrammerTitle, setCurrentProgrammerTitle] = useState(programmerTitles[0]);
+  const [currentTitle, setCurrentTitle] = useState("");
   const [titleIndex, setTitleIndex] = useState(0);
-  const [programmerTitleIndex, setProgrammerTitleIndex] = useState(0);
-  const [deleting, setDeleting] = useState(false);
-  const [deletingProgrammer, setDeletingProgrammer] = useState(false);
+  const [isDeletingTitle, setIsDeletingTitle] = useState(false);
 
   useEffect(() => {
-    const handleTitleChange = () => {
-      if (deleting) {
-        if (currentTitle.length > 0) {
-          setCurrentTitle(currentTitle.slice(0, -1));
-        } else {
-          setDeleting(false);
-          setTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
-        }
+    const handleTyping = (
+      titles: string[],
+      setText: React.Dispatch<React.SetStateAction<string>>,
+      text: string,
+      isDeleting: boolean,
+      setDeleting: React.Dispatch<React.SetStateAction<boolean>>,
+      index: number,
+      setIndex: React.Dispatch<React.SetStateAction<number>>
+    ) => {
+      const currentWord = titles[index % titles.length];
+      if (isDeleting) {
+        setText(currentWord.substring(0, text.length - 1));
       } else {
-        if (currentTitle.length < titles[titleIndex].length) {
-          setCurrentTitle(titles[titleIndex].slice(0, currentTitle.length + 1));
-        } else {
-          setTimeout(() => setDeleting(true), 1000); // Pause before deleting
-        }
+        setText(currentWord.substring(0, text.length + 1));
+      }
+
+      if (!isDeleting && text === currentWord) {
+        setTimeout(() => setDeleting(true), 1000); // Pause before deleting
+      } else if (isDeleting && text === "") {
+        setDeleting(false);
+        setIndex((prevIndex) => (prevIndex + 1) % titles.length);
       }
     };
 
-    const handleProgrammerTitleChange = () => {
-      if (deletingProgrammer) {
-        if (currentProgrammerTitle.length > 0) {
-          setCurrentProgrammerTitle(currentProgrammerTitle.slice(0, -1));
-        } else {
-          setDeletingProgrammer(false);
-          setProgrammerTitleIndex((prevIndex) => (prevIndex + 1) % programmerTitles.length);
-        }
-      } else {
-        if (currentProgrammerTitle.length < programmerTitles[programmerTitleIndex].length) {
-          setCurrentProgrammerTitle(programmerTitles[programmerTitleIndex].slice(0, currentProgrammerTitle.length + 1));
-        } else {
-          setTimeout(() => setDeletingProgrammer(true), 500); // Pause before deleting
-        }
-      }
-    };
-
-    const titleInterval = setInterval(handleTitleChange, 200);
-    const programmerTitleInterval = setInterval(handleProgrammerTitleChange, 200);
+    const titleTypingInterval = setInterval(
+      () =>
+        handleTyping(
+          titles,
+          setCurrentTitle,
+          currentTitle,
+          isDeletingTitle,
+          setIsDeletingTitle,
+          titleIndex,
+          setTitleIndex
+        ),
+      isDeletingTitle ? 50 : 100
+    );
 
     return () => {
-      clearInterval(titleInterval);
-      clearInterval(programmerTitleInterval);
+      clearInterval(titleTypingInterval);
     };
-  }, [currentTitle, currentProgrammerTitle, deleting, deletingProgrammer, titleIndex, programmerTitleIndex]);
+  }, [currentTitle, isDeletingTitle, titleIndex]);
+
+  useEffect(() => {
+    setCurrentTitle("");
+    setIsDeletingTitle(false);
+  }, [titleIndex]);
 
   return (
     <section className="min-h-screen pt-20 relative overflow-hidden">
@@ -101,8 +96,22 @@ export default function Hero() {
             animate="visible"
           >
             <motion.div variants={fadeIn('up', 0.2)}>
-              <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 min-h-[2.5rem]">{currentTitle}</p>
-              <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 min-h-[2.5rem]">{currentProgrammerTitle}</p>
+              <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 min-h-[2.5rem]">
+                <motion.span
+                  className="inline-block bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent"
+                  animate={{ 
+                    textShadow: "0px 0px 8px rgba(255, 0, 255, 0.8)",
+                    transition: { repeat: Infinity, duration: 1, ease: "easeInOut" }
+                  }}
+                >
+                  {currentTitle}
+                </motion.span>
+                <motion.span
+                  className="inline-block bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 h-5 w-1 ml-1 typing-cursor"
+                  animate={{ opacity: [0, 1] }}
+                  transition={{ repeat: Infinity, duration: 0.6 }}
+                ></motion.span>
+              </p>
             </motion.div>
 
             <motion.div 

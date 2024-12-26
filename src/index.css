@@ -47,6 +47,19 @@ body {
   scrollbar-color: theme('colors.pink.500') theme('colors.gray.200');
 }
 
+.typing-cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
 .custom-scrollbar::-webkit-scrollbar {
   width: 8px;
 }

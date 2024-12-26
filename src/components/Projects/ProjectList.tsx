@@ -13,11 +13,11 @@ interface ProjectListProps {
 
 export default function ProjectList({ projects }: ProjectListProps) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {projects.map((project, index) => (
         <div 
           key={index}
-          className="group relative bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 h-[400px]"
+          className="group relative bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 h-[400px] sm:h-[300px]"
         >
           <img
             src={project.image}
@@ -26,7 +26,7 @@ export default function ProjectList({ projects }: ProjectListProps) {
           />
           <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-between">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
+              <h3 className="text-2xl font-bold text-white mb-4 sm:text-xl">{project.title}</h3>
               <p className="text-gray-200 text-sm leading-relaxed">{project.description}</p>
             </div>
             <a

@@ -24,14 +24,14 @@ export default function Portfolio() {
         >
           <AnimatedText 
             text="Featured Projects"
-            className="text-4xl font-bold text-gray-900 dark:text-white mb-4"
+            className="text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:text-3xl"
           />
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto sm:text-base">
             A showcase of my recent work in design and development
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredWorks.map((project, index) => (
             <ProjectCard key={project.id} {...project} index={index} />
           ))}
@@ -43,7 +43,7 @@ export default function Portfolio() {
         >
           <Link
             to="/works"
-            className="inline-block px-8 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors duration-300"
+            className="inline-block px-8 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors duration-300 sm:px-6 sm:py-2"
           >
             View All Projects
           </Link>

@@ -13,7 +13,7 @@ interface ProjectCardProps {
 export default function ProjectCard({ image, title, description, link, index }: ProjectCardProps) {
   return (
     <motion.div 
-      className="group relative bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 h-[400px]"
+      className="group relative bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 h-[400px] sm:h-[300px]"
       variants={cardHover}
       initial="rest"
       whileHover="hover"
@@ -33,7 +33,7 @@ export default function ProjectCard({ image, title, description, link, index }: 
       >
         <div>
           <motion.h3 
-            className="text-2xl font-bold text-white mb-4"
+            className="text-2xl font-bold text-white mb-4 sm:text-xl"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
           >
@@ -52,7 +52,7 @@ export default function ProjectCard({ image, title, description, link, index }: 
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-all duration-300 w-fit mx-auto"
+          className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-all duration-300 w-fit mx-auto sm:px-4 sm:py-2"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >

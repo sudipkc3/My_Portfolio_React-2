@@ -18,7 +18,7 @@ export default function WorkCard({ title, description, image, link, tags, index 
       variants={fadeIn('up', index * 0.2)}
       className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg"
     >
-      <div className="relative h-64 overflow-hidden">
+      <div className="relative h-64 overflow-hidden sm:h-48">
         <AnimatedImage
           src={image}
           alt={title}
@@ -27,11 +27,11 @@ export default function WorkCard({ title, description, image, link, tags, index 
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
       </div>
 
-      <div className="p-6">
-        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">{title}</h3>
-        <p className="text-gray-600 dark:text-gray-400 mb-4">{description}</p>
+      <div className="p-6 sm:p-4">
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:text-xl">{title}</h3>
+        <p className="text-gray-600 dark:text-gray-400 mb-4 sm:mb-2">{description}</p>
         
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className="flex flex-wrap gap-2 mb-4 sm:mb-2">
           {tags.map((tag) => (
             <span 
               key={tag}

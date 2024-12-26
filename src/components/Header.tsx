@@ -125,7 +125,7 @@ export default function Header() {
       {/* Mobile Sidebar */}
       {isSidebarOpen && (
         <motion.div 
-          className="fixed inset-0 bg-black/50 z-50 md:hidden"
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 md:hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

@@ -22,7 +22,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form action="https://formspree.io/f/xkgnzvbp" method="post" onSubmit={handleSubmit} className="space-y-6">
       <div>
         <input
           type="text"
