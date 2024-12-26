@@ -22,7 +22,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form action="https://formspree.io/f/xkgnzvbp" method="post" onSubmit={handleSubmit} className="space-y-6">
+    <form action="https://formspree.io/f/xkgnzvbp" method="post" onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
       <div>
         <input
           type="text"
@@ -31,7 +31,7 @@ export default function ContactForm() {
           onChange={handleChange}
           placeholder="Your Name"
           required
-          className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 focus:border-pink-500 focus:ring-2 focus:ring-pink-500 outline-none transition-colors duration-300"
+          className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border-2 border-transparent focus:border-gradient-to-r focus:from-purple-400 focus:via-pink-500 focus:to-red-500 focus:ring-2 focus:ring-pink-500 outline-none transition-colors duration-300 cursor-pointer"
         />
       </div>
       <div>
@@ -42,7 +42,7 @@ export default function ContactForm() {
           onChange={handleChange}
           placeholder="Your Email"
           required
-          className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 focus:border-pink-500 focus:ring-2 focus:ring-pink-500 outline-none transition-colors duration-300"
+          className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border-2 border-transparent focus:border-gradient-to-r focus:from-purple-400 focus:via-pink-500 focus:to-red-500 focus:ring-2 focus:ring-pink-500 outline-none transition-colors duration-300 cursor-pointer"
         />
       </div>
       <div>
@@ -53,12 +53,12 @@ export default function ContactForm() {
           placeholder="Your Message"
           required
           rows={6}
-          className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 focus:border-pink-500 focus:ring-2 focus:ring-pink-500 outline-none transition-colors duration-300 resize-none"
+          className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border-2 border-transparent focus:border-gradient-to-r focus:from-purple-400 focus:via-pink-500 focus:to-red-500 focus:ring-2 focus:ring-pink-500 outline-none transition-colors duration-300 resize-none cursor-pointer"
         />
       </div>
       <button
         type="submit"
-        className="w-full px-8 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors duration-300"
+        className="w-full px-8 py-3 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white rounded-lg hover:bg-gradient-to-r hover:from-purple-700 hover:via-pink-700 hover:to-red-700 transition-colors duration-300 cursor-pointer"
       >
         Send Message
       </button>

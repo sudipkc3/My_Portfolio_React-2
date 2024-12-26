@@ -17,7 +17,7 @@ export default function Contact() {
         <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
           Contact Me
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-10">
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
@@ -47,9 +47,9 @@ export default function Contact() {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-pink-500 transition-colors duration-300"
+                      className="text-gray-600 dark:text-gray-400 transition-colors duration-300"
                     >
-                      <Icon className="w-6 h-6" />
+                      <Icon className="w-6 h-6 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500" />
                     </a>
                   );
                 })}
@@ -59,7 +59,7 @@ export default function Contact() {
               <a
                 href="/Images/Sudip Kc CV.pdf"
                 download
-                className="inline-block px-8 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors duration-300"
+                className="inline-block px-8 py-3 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white rounded-lg hover:bg-gradient-to-r hover:from-purple-700 hover:via-pink-700 hover:to-red-700 transition-colors duration-300"
               >
                 Download CV
               </a>
