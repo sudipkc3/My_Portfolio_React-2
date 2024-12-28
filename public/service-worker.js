@@ -17,6 +17,14 @@ self.addEventListener('install', event => {
         urlsToCache.map(url => {
           return cache.add(url).catch(error => {
             console.error(`Failed to cache ${url}:`, error);
+            return fetch(url).then(response => {
+              if (!response.ok) {
+                throw new Error(`Request for ${url} failed with status ${response.status}`);
+              }
+              return cache.put(url, response);
+            }).catch(fetchError => {
+              console.error(`Failed to fetch and cache ${url}:`, fetchError);
+            });
           });
         })
       );
