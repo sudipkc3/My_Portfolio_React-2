@@ -5,7 +5,7 @@ author: Sudip KC
 readTime: 5 min read
 category: UX
 excerpt: Understanding the importance of user personas, surveys, and interviews.
-coverImage: public\blogs\Blogs_Images\Blog04.jpg
+coverImage: /blogs/Blogs_Images/Blog04.jpg
 loading: lazy
 ---
 

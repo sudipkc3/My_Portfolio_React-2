@@ -5,7 +5,7 @@ author: Sudip KC
 readTime: 6 min read
 category: Design
 excerpt: An honest look at my struggles and successes in creating wireframes.
-coverImage: public\blogs\Blogs_Images\Blog05.jpg
+coverImage: /blogs/Blogs_Images/Blog05.jpg
 loading: lazy
 ---
 

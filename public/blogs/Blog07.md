@@ -5,7 +5,7 @@ author: Sudip KC
 readTime: 6 min read 
 category: Design 
 excerpt: Reflections on tackling real-world design problems as a beginner. 
-coverImage: public\blogs\Blogs_Images\Blog07.jpg
+coverImage: /blogs/Blogs_Images/Blog07.jpg
 loading: lazy
 ---
 

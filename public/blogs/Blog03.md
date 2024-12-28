@@ -5,7 +5,7 @@ author: Sudip KC
 readTime: 3 min read
 category: UI
 excerpt: A hands-on review of my early days using popular UI/UX design tools.
-coverImage: public\blogs\Blogs_Images\Blog03.jpg
+coverImage: /blogs/Blogs_Images/Blog03.jpg
 loading: lazy
 ---
 

@@ -5,7 +5,7 @@ author: Sudip KC
 readTime: 5 min read  
 category: Ui/UX  
 excerpt: Sharing my motivations, inspirations, and initial steps into the world of UI/UX design.  
-coverImage: public\blogs\Blogs_Images\Blog01.jpg
+coverImage: /blogsBlogs_Images/Blog01.jpg
 loading: lazy
 ---
 

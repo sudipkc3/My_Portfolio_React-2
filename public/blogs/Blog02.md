@@ -5,7 +5,7 @@ author: Sudip KC
 readTime: 6 min read  
 category: UI/UX  
 excerpt: A beginner's perspective on learning design principles, usability, and user-centric thinking.  
-coverImage: public\blogs\Blogs_Images\Blog02.jpg
+coverImage: /blogs/Blogs_Images/Blog02.jpg
 loading: lazy
 ---
 
