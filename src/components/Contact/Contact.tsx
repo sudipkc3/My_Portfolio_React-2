@@ -81,7 +81,7 @@ export default function Contact() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
           >
-            <ContactForm />
+            <ContactForm autocomplete="on" />
           </motion.div>
         </div>
       </div>

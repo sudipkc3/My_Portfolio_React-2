@@ -1,7 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
 
-export default function ContactForm() {
+interface ContactFormProps {
+  autocomplete?: string;
+}
+
+const ContactForm: React.FC<ContactFormProps> = ({ autocomplete }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -22,7 +26,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form action="https://formspree.io/f/xkgnzvbp" method="post" onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
+    <form action="https://formspree.io/f/xkgnzvbp" method="post" onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto" autoComplete={autocomplete}>
       <div>
         <input
           type="text"
@@ -32,6 +36,7 @@ export default function ContactForm() {
           placeholder="Your Name"
           required
           className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border-2 border-transparent focus:border-gradient-to-r focus:from-purple-400 focus:via-pink-500 focus:to-red-500 focus:ring-2 focus:ring-pink-500 outline-none transition-colors duration-300 cursor-pointer"
+          autoComplete="name"
         />
       </div>
       <div>
@@ -43,6 +48,7 @@ export default function ContactForm() {
           placeholder="Your Email"
           required
           className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border-2 border-transparent focus:border-gradient-to-r focus:from-purple-400 focus:via-pink-500 focus:to-red-500 focus:ring-2 focus:ring-pink-500 outline-none transition-colors duration-300 cursor-pointer"
+          autoComplete="email"
         />
       </div>
       <div>
@@ -54,6 +60,7 @@ export default function ContactForm() {
           required
           rows={6}
           className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border-2 border-transparent focus:border-gradient-to-r focus:from-purple-400 focus:via-pink-500 focus:to-red-500 focus:ring-2 focus:ring-pink-500 outline-none transition-colors duration-300 resize-none cursor-pointer"
+          autoComplete="off"
         />
       </div>
       <button
@@ -65,3 +72,5 @@ export default function ContactForm() {
     </form>
   );
 }
+
+export default ContactForm;
