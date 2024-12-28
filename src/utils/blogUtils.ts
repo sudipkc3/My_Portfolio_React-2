@@ -10,7 +10,7 @@ interface BlogFrontmatter {
 
 export async function getBlogPost(slug: string): Promise<{ frontmatter: BlogFrontmatter; content: string }> {
   try {
-    const response = await fetch(`public/blogs/${slug}.md`);
+    const response = await fetch(`blogs/${slug}.md`);
     if (!response.ok) {
       throw new Error(`Failed to load blog post: ${slug}`);
     }

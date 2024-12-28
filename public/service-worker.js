@@ -4,7 +4,9 @@ const urlsToCache = [
   '/index.html',             // HTML file
   '/assets/main-BEPDGT-e.css',  // Correct CSS file path
   '/assets/main-DuH4v69u.js',   // Correct JS file path
-  '/Images/Logo.png'         // Correct image path
+  '/Images/Logo.png',        // Correct image path
+  '/Images/ME.jpg',          // New image file
+  '/Images/Container right.jpg' // New image file
 ];
 
 // Install Event: Cache Files
