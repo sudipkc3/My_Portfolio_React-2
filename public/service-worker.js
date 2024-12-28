@@ -13,9 +13,15 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
       console.log('Service Worker: Caching files', urlsToCache);
-      return cache.addAll(urlsToCache);
+      return Promise.all(
+        urlsToCache.map(url => {
+          return cache.add(url).catch(error => {
+            console.error(`Failed to cache ${url}:`, error);
+          });
+        })
+      );
     }).catch(error => {
-      console.error('Failed to cache resources:', error);
+      console.error('Failed to open cache:', error);
     })
   );
 });
