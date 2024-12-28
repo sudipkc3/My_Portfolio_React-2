@@ -9,9 +9,13 @@ const urlsToCache = [
 
 // Install Event: Cache Files
 self.addEventListener('install', event => {
+  console.log('Service Worker: Install event triggered');
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
+      console.log('Service Worker: Caching files', urlsToCache);
       return cache.addAll(urlsToCache);
+    }).catch(error => {
+      console.error('Failed to cache resources:', error);
     })
   );
 });
