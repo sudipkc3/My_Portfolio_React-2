@@ -1,22 +1,19 @@
-const CACHE_NAME = 'portfolio-cache-v1'; 
+const CACHE_NAME = 'portfolio-cache-v1';
 const urlsToCache = [
-  '/',               // Main page
-  '/index.html',     // HTML file
-  '/styles.css',     // CSS file
-  '/script.js',      // JS file
-  '/images/logo.png' // Example static asset
+  '/',                       // Main page
+  '/index.html',             // HTML file
+  '/assets/main-BEPDGT-e.css',  // Correct CSS file path
+  '/assets/main-7Rgbfpsj.js',   // Correct JS file path
+  '/Images/Logo.png'         // Correct image path
 ];
 
 // Install Event: Cache Files
 self.addEventListener('install', event => {
-  console.log('Service Worker: Install event triggered');
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
-      console.log('Service Worker: Caching files', urlsToCache);
       return Promise.all(
         urlsToCache.map(url => {
           return cache.add(url).catch(error => {
-            console.error(`Failed to cache ${url}:`, error);
             return fetch(url).then(response => {
               if (!response.ok) {
                 throw new Error(`Request for ${url} failed with status ${response.status}`);
