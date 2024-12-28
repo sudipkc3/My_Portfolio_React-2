@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   darkMode: 'class', // Use class-based dark mode
   content: [
     "./index.html",
