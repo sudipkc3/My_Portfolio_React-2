@@ -3,9 +3,10 @@ title: Why I Chose to Become a UI/UX Designer
 date: Apr 7, 2023  
 author: Sudip KC  
 readTime: 5 min read  
-category: Design  
+category: Ui/UX  
 excerpt: Sharing my motivations, inspirations, and initial steps into the world of UI/UX design.  
-coverImage: https://images.unsplash.com/photo-1502663958381-2fd19537d9d9?q=80&w=2021&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+coverImage: public\blogs\Blogs_Images\Blog01.jpg
+loading: lazy
 ---
 
 # Why I Chose to Become a UI/UX Designer  
@@ -55,4 +56,4 @@ If you’re thinking about getting into UI/UX design, here’s my advice:
 
 Choosing to become a UI/UX designer has been one of the most rewarding decisions of my life. It’s a field where creativity meets purpose, and every project is an opportunity to make a meaningful impact.  
 
-For me, it’s about more than just designing interfaces—it’s about creating experiences that connect with people. If you’re someone who loves problem-solving and helping others, I can’t recommend this journey enough. It’s challenging, it’s exciting, and most importantly, it’s worth it.  
+For me, it’s about more than just designing interfaces—it’s about creating experiences that connect with people. If you’re someone who loves problem-solving and helping others, I can’t recommend this journey enough. It’s challenging, it’s exciting, and most importantly, it’s worth it.

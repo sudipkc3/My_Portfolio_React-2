@@ -1,11 +1,12 @@
 ---
 title: First Steps: Understanding the Basics of UI/UX Design  
-date: Apr 12, 2023 
+date: Apr 10, 2023 
 author: Sudip KC  
 readTime: 6 min read  
-category: Design  
+category: UI/UX  
 excerpt: A beginner's perspective on learning design principles, usability, and user-centric thinking.  
-coverImage: https://images.unsplash.com/photo-1511389026070-a14ae610a1be?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+coverImage: public\blogs\Blogs_Images\Blog02.jpg
+loading: lazy
 ---
 
 # First Steps: Understanding the Basics of UI/UX Design  
@@ -80,4 +81,4 @@ UI/UX design is a skill that improves with practice. Start small by redesigning 
 
 The journey to becoming a UI/UX designer begins with a willingness to learn, explore, and empathize with users. By mastering design principles, focusing on usability, and adopting a user-centric mindset, you’ll set yourself up for success in this exciting field.  
 
-Remember, every designer was once a beginner. Don’t rush the process—take it step by step, and enjoy the learning experience. The world of UI/UX design is vast and full of opportunities, and your first steps are just the beginning.  
+Remember, every designer was once a beginner. Don’t rush the process—take it step by step, and enjoy the learning experience. The world of UI/UX design is vast and full of opportunities, and your first steps are just the beginning.

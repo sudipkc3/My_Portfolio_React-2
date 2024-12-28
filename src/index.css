@@ -33,6 +33,19 @@
   animation: blob 7s infinite;
 }
 
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 22s linear infinite;
+}
+
 html {
   scroll-behavior: smooth;
 }

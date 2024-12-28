@@ -11,10 +11,10 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-r from-gray-50 via-gray-100 to-gray-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <section id="contact" className="py-6 bg-gradient-to-r from-gray-50 via-gray-100 to-gray-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <div className="container mx-auto px-6">
         <motion.h2 
-          className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12"
+          className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-6"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -86,26 +86,24 @@ export default function Contact() {
         </div>
       </div>
       
-      <div className="mt-12 py-4 relative overflow-hidden" style={{ height: '3rem' }}>
+      <div className="mt-4 py-1 relative overflow-hidden" style={{ height: '3rem' }}>
         <motion.div
           className="text-gray-500 dark:text-gray-400 absolute"
-          style={{ fontFamily: 'cursive', whiteSpace: 'nowrap', textAlign: 'center', width: '100%', fontSize: '1.25rem', letterSpacing: '0.2rem' }}
+          style={{ fontFamily: 'rajdhani', whiteSpace: 'nowrap', textAlign: 'center', width: '100%', fontSize: '1.50rem', letterSpacing: '0.2rem' }}
         >
           <motion.p
-            style={{ display: 'inline-block', minWidth: '100%', background: 'linear-gradient(90deg, #ff69b4, #ff1493, #ff69b4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundSize: '200% 100%' }}
+            style={{ display: 'inline-block', minWidth: '100%', color: 'currentColor' }}
             initial={{ x: '100%' }}
-            animate={{ x: '-100%', backgroundPosition: ['200% 0', '0 0'] }}
+            animate={{ x: '-100%' }}
             transition={{
               repeat: Infinity,
               duration: 15, 
               ease: 'linear',
             }}
-            whileHover={{ scale: 1.1 }}
           >
             {"© 2024 Sudip KC. All rights reserved.".split("").map((char, index) => (
               <motion.span
                 key={index}
-                whileHover={{ y: -5, transition: { duration: 0.2 } }}
                 style={{ display: 'inline-block' }}
               >
                 {char === " " ? "\u00A0" : char}

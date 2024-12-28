@@ -3,8 +3,7 @@ import { motion } from 'framer-motion';
 import { staggerContainer, fadeIn } from '../utils/animations';
 import AnimatedText from '../components/shared/AnimatedText';
 import BlogCard from '../components/Blog/BlogCard';
-import { getBlogPost } from '../utils/blogUtils';
-
+import { getBlogPost, getAllBlogSlugs } from '../utils/blogUtils'; // Import the function to get all blog slugs
 
 interface BlogPost {
   id: string;
@@ -21,22 +20,26 @@ export default function Blog() {
 
   useEffect(() => {
     const loadPosts = async () => {
-      const slugs = [ 'Basics-Of-UIUX', 'Starting-Journey', ];
-      const loadedPosts = await Promise.all(
-        slugs.map(async (slug) => {
-          const { frontmatter } = await getBlogPost(slug);
-          return {
-            id: slug,
-            title: frontmatter.title,
-            excerpt: frontmatter.excerpt,
-            image: frontmatter.coverImage,
-            date: frontmatter.date,
-            readTime: frontmatter.readTime,
-            category: frontmatter.category
-          };
-        })
-      );
-      setPosts(loadedPosts);
+      try {
+        const slugs = await getAllBlogSlugs(); // Fetch all blog slugs dynamically
+        const loadedPosts = await Promise.all(
+          slugs.map(async (slug) => {
+            const { frontmatter } = await getBlogPost(slug);
+            return {
+              id: slug,
+              title: frontmatter.title,
+              excerpt: frontmatter.excerpt,
+              image: frontmatter.coverImage,
+              date: frontmatter.date,
+              readTime: frontmatter.readTime,
+              category: frontmatter.category
+            };
+          })
+        );
+        setPosts(loadedPosts);
+      } catch (error) {
+        console.error('Error loading posts:', error);
+      }
     };
 
     loadPosts();

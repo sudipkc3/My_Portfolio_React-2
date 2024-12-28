@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import TabButton from './TabButton';
 import SkillsList from './SkillsList';
-import { fadeIn, staggerContainer } from '../../utils/animations';
+import { fadeIn, staggerContainer, slideIn } from '../../utils/animations';
 import AnimatedText from '../shared/AnimatedText';
 
 export default function About() {
@@ -107,74 +107,94 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-800">
-      <motion.div 
-        className="container mx-auto px-4 md:px-16 flex justify-center items-center"
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <motion.div 
-            className="relative border h-[500px] md:h-[800px] w-full md:w-[500px] flex justify-center items-center rounded-xl"
-            variants={fadeIn('right')}
-          >
-            <img
-              src='/Images/ME.jpg'
-              alt="Sudip KC"
-              className="relative rounded-xl border shadow-2xl w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
-            />
-          </motion.div>
-
-          <motion.div 
-            className="space-y-8 h-full"
-            variants={fadeIn('left')}
+    <>
+      <section id="about" className="py-20 bg-gray-50 dark:bg-gray-800">
+        <motion.div 
+          className="container mx-auto px-4 md:px-16 flex justify-center items-center"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <motion.div 
+              className="relative border h-[500px] md:h-[800px] w-full md:w-[500px] flex justify-center items-center rounded-xl"
+              variants={fadeIn('right')}
             >
-            <AnimatedText
-              text="About Me"
-              className="text-4xl font-bold text-gray-900 dark:text-white"
-            />
-            
-            <motion.p 
-              className="text-lg text-gray-600 dark:text-gray-400 text-justify"
-              variants={fadeIn('up', 0.2)}
-            >
-              Hello, my name is Sudip KC, and I am from Nepal. I am currently pursuing a degree
-              in Software Engineering, where I am honing my skills in various aspects of software
-              development. Alongside my studies, I specialize in UI/UX Design and have experience
-              in frontend development, combining creativity with technical expertise to create
-              engaging and user-friendly interfaces.
-            </motion.p>
+              <img
+                src='/Images/ME.jpg'
+                alt="Sudip KC"
+                className="relative rounded-xl border shadow-2xl w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+              />
+            </motion.div>
 
             <motion.div 
-              className="space-y-6"
-              variants={fadeIn('up', 0.3)}
-            >
-              <div className="flex flex-wrap gap-4">
-                {Object.keys(tabs).map((tab) => (
-                  <TabButton
-                    key={tab}
-                    active={activeTab === tab}
-                    onClick={() => setActiveTab(tab)}
-                  >
-                    {tab.charAt(0).toUpperCase() + tab.slice(1)}
-                  </TabButton>
-                ))}
-              </div>
+              className="space-y-8 h-full"
+              variants={fadeIn('left')}
+              >
+              <AnimatedText
+                text="About Me"
+                className="text-4xl font-bold text-gray-900 dark:text-white"
+              />
+              
+              <motion.p 
+                className="text-lg text-gray-600 dark:text-gray-400 text-justify"
+                variants={fadeIn('up', 0.2)}
+              >
+                Hello, my name is Sudip KC, and I am from Nepal. I am currently pursuing a degree
+                in Software Engineering, where I am honing my skills in various aspects of software
+                development. Alongside my studies, I specialize in UI/UX Design and have experience
+                in frontend development, combining creativity with technical expertise to create
+                engaging and user-friendly interfaces.
+              </motion.p>
 
               <motion.div 
-                className="min-h-[400px] bg-gray-100 dark:bg-gray-900 rounded-xl p-6"
-                initial={false}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
+                className="space-y-6"
+                variants={fadeIn('up', 0.3)}
               >
-                <SkillsList skills={tabs[activeTab as keyof typeof tabs].content} />
+                <div className="flex flex-wrap gap-4">
+                  {Object.keys(tabs).map((tab) => (
+                    <TabButton
+                      key={tab}
+                      active={activeTab === tab}
+                      onClick={() => setActiveTab(tab)}
+                    >
+                      {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                    </TabButton>
+                  ))}
+                </div>
+
+                <motion.div 
+                  className="min-h-[400px] bg-gray-100 dark:bg-gray-900 rounded-xl p-6"
+                  initial={false}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <SkillsList skills={tabs[activeTab as keyof typeof tabs].content} />
+                </motion.div>
               </motion.div>
             </motion.div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
+      </section>
+      <motion.div 
+        className="w-full overflow-hidden bg-gray-600 relative py-3" // Tailwind CSS does not have a silver color, using gray-300 instead
+        variants={slideIn('up')}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.div
+          className="flex items-center justify-start rotate-2 whitespace-nowrap animate-marquee"
+        >
+          <span className="font-bold text-2xl text-white mx-5 before:content-['✨'] before:mx-2 after:content-['✨'] after:mx-2">UX Design</span>
+          <span className="font-bold text-2xl text-white mx-5 before:content-['✨'] before:mx-2 after:content-['✨'] after:mx-2">App Design</span>
+          <span className="font-bold text-2xl text-white mx-5 before:content-['✨'] before:mx-2 after:content-['✨'] after:mx-2">Dashboard</span>
+          <span className="font-bold text-2xl text-white mx-5 before:content-['✨'] before:mx-2 after:content-['✨'] after:mx-2">Wireframe</span>
+          <span className="font-bold text-2xl text-white mx-5 before:content-['✨'] before:mx-2 after:content-['✨'] after:mx-2">User Research</span>
+          <span className="font-bold text-2xl text-white mx-5 before:content-['✨'] before:mx-2 after:content-['✨'] after:mx-2">Programmer</span>
+          <span className="font-bold text-2xl text-white mx-5 before:content-['✨'] before:mx-2 after:content-['✨'] after:mx-2">Frontend Developer</span>
+        </motion.div>
       </motion.div>
-    </section>
+    </>
   );
 }

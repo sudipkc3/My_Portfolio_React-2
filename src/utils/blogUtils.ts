@@ -16,15 +16,31 @@ export async function getBlogPost(slug: string): Promise<{ frontmatter: BlogFron
     }
   
     const text = await response.text();
-    const [_, frontmatterStr, content] = text.split('---');
-    if (!frontmatterStr || !content) {
-      throw new Error('Invalid markdown format');
+    const parts = text.split('---');
+    if (parts.length < 3) {
+      throw new Error(`Invalid markdown format for blog post: ${slug}`);
     }
     
+    const frontmatterStr = parts[1];
+    const content = parts.slice(2).join('---');
     const frontmatter = parseFrontmatter(frontmatterStr);
     return { frontmatter, content: content.trim() };
   } catch (error) {
-    console.error('Error loading blog post:', error);
+    console.error(`Error loading blog post (${slug}):`, error);
+    throw error;
+  }
+}
+
+export async function getAllBlogSlugs(): Promise<string[]> {
+  try {
+    const response = await fetch('blogs/index.json'); // Assuming you have an index.json file listing all blog slugs
+    if (!response.ok) {
+      throw new Error('Failed to load blog slugs');
+    }
+    const slugs = await response.json();
+    return slugs;
+  } catch (error) {
+    console.error('Error loading blog slugs:', error);
     throw error;
   }
 }
