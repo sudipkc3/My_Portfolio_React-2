@@ -2,7 +2,6 @@ import { Mail, Phone, Github, Facebook, Instagram, Linkedin } from 'lucide-react
 import ContactForm from './ContactForm';
 import { motion } from 'framer-motion';
 
-
 export default function Contact() {
   const socialLinks = [
     { icon: Github, href: 'https://github.com/Sudeepkaycee289', label: 'GitHub' },
@@ -12,13 +11,23 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="contact" className="py-20 bg-gradient-to-r from-gray-50 via-gray-100 to-gray-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
+        <motion.h2 
+          className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
           Contact Me
-        </h2>
+        </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-10">
-          <div className="space-y-8">
+          <motion.div 
+            className="space-y-8"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
             <div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 Get in Touch
@@ -42,32 +51,38 @@ export default function Contact() {
                 {socialLinks.map((link, index) => {
                   const Icon = link.icon;
                   return (
-                    <a
+                    <motion.a
                       key={index}
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-600 dark:text-gray-400 transition-colors duration-300"
+                      whileHover={{ scale: 1.2, rotate: 10 }}
                     >
                       <Icon className="w-6 h-6 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500" />
-                    </a>
+                    </motion.a>
                   );
                 })}
               </div>
             </div>
             <div>
-              <a
+              <motion.a
                 href="/Images/Sudip Kc CV.pdf"
                 download
                 className="inline-block px-8 py-3 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white rounded-lg hover:bg-gradient-to-r hover:from-purple-700 hover:via-pink-700 hover:to-red-700 transition-colors duration-300"
+                whileHover={{ scale: 1.1 }}
               >
                 Download CV
-              </a>
+              </motion.a>
             </div>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
             <ContactForm />
-          </div>
+          </motion.div>
         </div>
       </div>
       
@@ -77,15 +92,15 @@ export default function Contact() {
           style={{ fontFamily: 'cursive', whiteSpace: 'nowrap', textAlign: 'center', width: '100%', fontSize: '1.25rem', letterSpacing: '0.2rem' }}
         >
           <motion.p
-            style={{ display: 'inline-block', minWidth: '100%' }}
+            style={{ display: 'inline-block', minWidth: '100%', background: 'linear-gradient(90deg, #ff69b4, #ff1493, #ff69b4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundSize: '200% 100%' }}
             initial={{ x: '100%' }}
-            animate={{ x: '-100%' }}
+            animate={{ x: '-100%', backgroundPosition: ['200% 0', '0 0'] }}
             transition={{
               repeat: Infinity,
               duration: 15, 
               ease: 'linear',
             }}
-            whileHover={{ scale: 1.1, color: '#ff69b4' }}
+            whileHover={{ scale: 1.1 }}
           >
             {"© 2024 Sudip KC. All rights reserved.".split("").map((char, index) => (
               <motion.span
