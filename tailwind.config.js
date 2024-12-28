@@ -1,8 +1,5 @@
-// Use `import` instead of `require`
-import plugin from 'tailwindcss/plugin';
-import typography from '@tailwindcss/typography';
-
-export default {
+module.exports = {
+  darkMode: 'class', // Use class-based dark mode
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -10,5 +7,7 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [typography], // Use the imported plugin
+  plugins: [
+    require('@tailwindcss/typography'), // Use the required plugin
+  ],
 };
