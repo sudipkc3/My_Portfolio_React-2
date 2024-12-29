@@ -11,7 +11,7 @@ export default function TabButton({ active, onClick, children }: TabButtonProps)
   return (
     <motion.button
       onClick={onClick}
-      className={`relative px-6 py-3 text-lg rounded-lg transition-all ${
+      className={`relative px-2 py-1 md:px-3 md:py-2 text-sm md:text-base rounded-lg transition-all ${
         active
           ? 'text-white bg-pink-600 shadow-lg'
           : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800'

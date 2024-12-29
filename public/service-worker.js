@@ -1,4 +1,4 @@
-const CACHE_NAME = 'portfolio-cache-v1';
+const CACHE_NAME = 'portfolio-cache-v2';
 const urlsToCache = [
   '/',                       // Main page
   '/index.html',             // HTML file
@@ -11,6 +11,7 @@ const urlsToCache = [
 
 // Install Event: Cache Files
 self.addEventListener('install', event => {
+  self.skipWaiting(); // Force the service worker to activate immediately
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
       return Promise.all(
@@ -35,11 +36,19 @@ self.addEventListener('install', event => {
 
 // Fetch Event: Serve Cached Files
 self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request).then(response => {
-      return response || fetch(event.request);
-    })
-  );
+  if (event.request.mode === 'navigate') {
+    // Network-first for HTML files
+    event.respondWith(
+      fetch(event.request).catch(() => caches.match(event.request))
+    );
+  } else {
+    // Cache-first for other files
+    event.respondWith(
+      caches.match(event.request).then(response => {
+        return response || fetch(event.request);
+      })
+    );
+  }
 });
 
 // Activate Event: Clean Up Old Caches

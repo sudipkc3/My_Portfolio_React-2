@@ -110,15 +110,15 @@ export default function About() {
     <>
       <section id="about" className="py-20 bg-gray-50 dark:bg-gray-800">
         <motion.div 
-          className="container mx-auto px-4 md:px-16 flex justify-center items-center"
+          className="container mx-auto px-4 md:px-8 lg:px-16 flex justify-center items-center"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             <motion.div 
-              className="relative border h-[500px] md:h-[800px] w-full md:w-[500px] flex justify-center items-center rounded-xl"
+              className="relative border h-[300px] md:h-[400px] lg:h-[700px] w-full md:w-[300px] lg:w-[500px] flex justify-center items-center rounded-xl"
               variants={fadeIn('right')}
             >
               <img
@@ -129,16 +129,16 @@ export default function About() {
             </motion.div>
 
             <motion.div 
-              className="space-y-8 h-full"
+              className="space-y-6 md:space-y-8 h-full"
               variants={fadeIn('left')}
               >
               <AnimatedText
                 text="About Me"
-                className="text-4xl font-bold text-gray-900 dark:text-white"
+                className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white"
               />
               
               <motion.p 
-                className="text-lg text-gray-600 dark:text-gray-400 text-justify"
+                className="text-base md:text-lg text-gray-600 dark:text-gray-400 text-justify"
                 variants={fadeIn('up', 0.2)}
               >
                 Hello, my name is Sudip KC, and I am from Nepal. I am currently pursuing a degree
@@ -149,10 +149,10 @@ export default function About() {
               </motion.p>
 
               <motion.div 
-                className="space-y-6"
+                className="space-y-4 md:space-y-6"
                 variants={fadeIn('up', 0.3)}
               >
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-2 md:gap-4">
                   {Object.keys(tabs).map((tab) => (
                     <TabButton
                       key={tab}
@@ -165,7 +165,7 @@ export default function About() {
                 </div>
 
                 <motion.div 
-                  className="min-h-[400px] bg-gray-100 dark:bg-gray-900 rounded-xl p-6"
+                  className="min-h-[300px] md:min-h-[400px] bg-gray-100 dark:bg-gray-900 rounded-xl p-4 md:p-6"
                   initial={false}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5 }}
@@ -178,7 +178,7 @@ export default function About() {
         </motion.div>
       </section>
       <motion.div 
-        className="w-full overflow-hidden bg-gray-600 relative py-3" // Tailwind CSS does not have a silver color, using gray-300 instead
+        className="w-full overflow-hidden bg-gray-600 relative py-3"
         variants={slideIn('up')}
         initial="hidden"
         animate="visible"

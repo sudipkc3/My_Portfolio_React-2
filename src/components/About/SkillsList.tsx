@@ -34,7 +34,7 @@ export default function SkillsList({ skills }: SkillsListProps) {
 
   return (
     <motion.div 
-      className="grid grid-cols-1 md:grid-cols-2 gap-8"
+      className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4"
       variants={container}
       initial="hidden"
       animate="visible"
@@ -42,16 +42,16 @@ export default function SkillsList({ skills }: SkillsListProps) {
       {skills.map((skill) => (
         <motion.div 
           key={skill.category} 
-          className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700"
+          className="bg-white dark:bg-gray-800 rounded-xl p-3 md:p-4 shadow-lg border border-gray-200 dark:border-gray-700"
           variants={item}
           whileHover={{ y: -5 }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="text-xl font-semibold text-pink-600 dark:text-pink-500 mb-4 flex items-center">
+          <h3 className="text-base md:text-lg font-semibold text-pink-600 dark:text-pink-500 mb-1 md:mb-2 flex items-center">
             <span className="w-2 h-2 bg-pink-600 dark:bg-pink-500 rounded-full mr-2" />
             {skill.category}
           </h3>
-          <ul className="space-y-2">
+          <ul className="space-y-1 md:space-y-2">
             {skill.items.map((item) => (
               <motion.li
                 key={item}

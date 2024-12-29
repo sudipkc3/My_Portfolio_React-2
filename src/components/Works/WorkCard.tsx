@@ -16,7 +16,7 @@ export default function WorkCard({ title, description, image, link, tags, index 
   return (
     <motion.div
       variants={fadeIn('up', index * 0.2)}
-      className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg"
+      className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg max-w-xs mx-auto sm:max-w-none"
     >
       <div className="relative h-64 overflow-hidden sm:h-48">
         <AnimatedImage
@@ -29,13 +29,13 @@ export default function WorkCard({ title, description, image, link, tags, index 
 
       <div className="p-6 sm:p-4">
         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:text-xl">{title}</h3>
-        <p className="text-gray-600 dark:text-gray-400 mb-4 sm:mb-2">{description}</p>
+        <p className="text-gray-600 dark:text-gray-400 mb-4 sm:mb-2 text-sm sm:text-base">{description}</p>
         
         <div className="flex flex-wrap gap-2 mb-4 sm:mb-2">
           {tags.map((tag) => (
             <span 
               key={tag}
-              className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-sm"
+              className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs sm:text-sm"
             >
               {tag}
             </span>
@@ -46,11 +46,11 @@ export default function WorkCard({ title, description, image, link, tags, index 
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-pink-600 dark:text-pink-500 hover:text-pink-700 dark:hover:text-pink-400"
+          className="inline-flex items-center gap-2 text-pink-600 dark:text-pink-500 hover:text-pink-700 dark:hover:text-pink-400 text-sm sm:text-base"
           whileHover={{ x: 5 }}
           transition={{ duration: 0.2 }}
         >
-          View Project <ExternalLink className="w-4 h-4" />
+          View Project <ExternalLink className="w-4 h-4 text-gray-900 dark:text-white" />
         </motion.a>
       </div>
     </motion.div>
