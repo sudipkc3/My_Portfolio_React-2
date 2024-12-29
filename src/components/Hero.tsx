@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Github, Facebook, Instagram, Linkedin } from 'lucide-react'; // Ensure all icons are correctly imported
 import { fadeIn, slideIn } from '../utils/animations';
 import { useState, useEffect } from 'react';
+import ModernDownloadButton from './shared/ModernDownloadButton'; // Import the new component
 
 export default function Hero() {
   const socialLinks = [
@@ -151,7 +152,7 @@ export default function Hero() {
             <motion.div 
               className="flex justify-center md:justify-start space-x-6 mt-6" // Added margin-top for gap
               variants={fadeIn('up', 0.4)}
-            >
+              >
               {socialLinks.map((link, ) => {
                 const Icon = link.icon;
                 return (
@@ -173,6 +174,7 @@ export default function Hero() {
                 );
               })}
             </motion.div>
+            <ModernDownloadButton /> {/* Add the new component here */}
           </motion.div>
 
           <motion.div 
