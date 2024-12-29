@@ -27,6 +27,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/works" element={<Works />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="*" element={<Home />} /> {/* Catch-all route */}
         </Routes>
       </main>
     </div>
