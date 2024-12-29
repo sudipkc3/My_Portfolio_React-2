@@ -2,8 +2,8 @@ const CACHE_NAME = 'portfolio-cache-v1';
 const urlsToCache = [
   '/',                       // Main page
   '/index.html',             // HTML file
-  '/assets/main-BEPDGT-e.css',  //  CSS file path
-  '/assets/main-DuH4v69u.js',   //  JS file path
+  '/assets/Styles.css',  //  CSS file path
+  '/assets/Script.js',   //  JS file path
   '/Images/Logo.png',        // Logo image path
   '/Images/ME.jpg',          // About me image file
   '/Images/Container right.jpg' // Hero section image file
