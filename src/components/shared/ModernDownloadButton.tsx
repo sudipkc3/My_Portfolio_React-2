@@ -77,13 +77,13 @@ const ModernDownloadButton = () => {
         </defs>
 
         {/* Background with pulse effect */}
-        <rect
+        {/* <rect
           width="180"
           height="70"
           rx="16"
           fill="url(#pulseGradient)"
           className="transition-all duration-500"
-        />
+        /> */}
 
         {/* Dynamic border */}
         <rect

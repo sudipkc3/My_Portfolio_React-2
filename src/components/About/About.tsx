@@ -2,10 +2,11 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import TabButton from './TabButton';
 import SkillsList from './SkillsList';
-import { fadeIn, staggerContainer, slideIn } from '../../utils/animations';
+import { fadeIn, staggerContainer } from '../../utils/animations';
 import AnimatedText from '../shared/AnimatedText';
 import Lottie from 'lottie-react';
 import animationData from '../shared/Animation JSON/Here Arrow.json';
+import AnimatedMarquee from './AnimatedMarquee';
 
 export default function About() {
   const [activeTab, setActiveTab] = useState('skills');
@@ -183,24 +184,7 @@ export default function About() {
           </div>
         </motion.div>
       </section>
-      <motion.div 
-        className="w-full overflow-hidden bg-gray-600 relative py-3"
-        variants={slideIn('up')}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.div
-          className="flex items-center justify-start rotate-2 whitespace-nowrap animate-marquee"
-        >
-          <span className="font-bold text-2xl text-white mx-5 before:content-['✨'] before:mx-2 after:content-['✨'] after:mx-2">UX Design</span>
-          <span className="font-bold text-2xl text-white mx-5 before:content-['✨'] before:mx-2 after:content-['✨'] after:mx-2">App Design</span>
-          <span className="font-bold text-2xl text-white mx-5 before:content-['✨'] before:mx-2 after:content-['✨'] after:mx-2">Dashboard</span>
-          <span className="font-bold text-2xl text-white mx-5 before:content-['✨'] before:mx-2 after:content-['✨'] after:mx-2">Wireframe</span>
-          <span className="font-bold text-2xl text-white mx-5 before:content-['✨'] before:mx-2 after:content-['✨'] after:mx-2">User Research</span>
-          <span className="font-bold text-2xl text-white mx-5 before:content-['✨'] before:mx-2 after:content-['✨'] after:mx-2">Programmer</span>
-          <span className="font-bold text-2xl text-white mx-5 before:content-['✨'] before:mx-2 after:content-['✨'] after:mx-2">Frontend Developer</span>
-        </motion.div>
-      </motion.div>
+      <AnimatedMarquee />
     </>
   );
 }

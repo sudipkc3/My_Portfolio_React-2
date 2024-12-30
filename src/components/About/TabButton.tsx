@@ -13,7 +13,7 @@ export default function TabButton({ active, onClick, children }: TabButtonProps)
       onClick={onClick}
       className={`relative px-2 py-1 md:px-3 md:py-2 text-sm md:text-base rounded-lg transition-all ${
         active
-          ? 'text-white bg-pink-600 shadow-lg'
+          ? 'text-white bg-gradient-to-r from-pink-600 to-blue-400 shadow-lg'
           : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800'
       }`}
       whileHover={{ scale: 1.05 }}
@@ -30,7 +30,7 @@ export default function TabButton({ active, onClick, children }: TabButtonProps)
       
       {active && (
         <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg -z-10"
+          className="absolute inset-0 bg-gradient-to-r from-pink-700 to-blue-500 rounded-lg -z-10"
           layoutId="activeTab"
           transition={{
             type: "spring",

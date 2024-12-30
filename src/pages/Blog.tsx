@@ -5,7 +5,7 @@ import AnimatedText from '../components/shared/AnimatedText';
 import BlogCard from '../components/Blog/BlogCard';
 import { getBlogPost, getAllBlogSlugs } from '../utils/blogUtils'; // Import the function to get all blog slugs
 import LottieIcon from '../components/shared/LottieIcon';
-import backgroundAnimation from '../components/shared/Animation JSON/Background 02.json';
+import backgroundAnimation from '../components/shared/Animation JSON/Background 01.json';
 
 interface BlogPost {
   id: string;

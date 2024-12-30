@@ -69,7 +69,7 @@ export default function Contact() {
               <motion.a
                 href="/Images/Sudip Kc CV.pdf"
                 download
-                className="inline-block px-8 py-3 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white rounded-lg hover:bg-gradient-to-r hover:from-purple-700 hover:via-pink-700 hover:to-red-700 transition-colors duration-300"
+                className="inline-block px-8 py-3 text-white rounded-lg transition-colors duration-300 bg-gradient-to-r from-pink-600 to-blue-400"
                 whileHover={{ scale: 1.1 }}
               >
                 Download CV

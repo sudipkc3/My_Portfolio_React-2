@@ -35,7 +35,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ autocomplete }) => {
           onChange={handleChange}
           placeholder="Your Name"
           required
-          className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border-2 border-transparent focus:border-gradient-to-r focus:from-purple-400 focus:via-pink-500 focus:to-red-500 focus:ring-2 focus:ring-pink-500 outline-none transition-colors duration-300 cursor-pointer"
+          className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border-2 border-transparent focus:border-gradient-to-r focus:from-pink-600 focus:to-blue-400 focus:ring-2 focus:ring-pink-500 outline-none transition-colors duration-300 cursor-pointer"
           autoComplete="name"
         />
       </div>
@@ -47,7 +47,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ autocomplete }) => {
           onChange={handleChange}
           placeholder="Your Email"
           required
-          className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border-2 border-transparent focus:border-gradient-to-r focus:from-purple-400 focus:via-pink-500 focus:to-red-500 focus:ring-2 focus:ring-pink-500 outline-none transition-colors duration-300 cursor-pointer"
+          className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border-2 border-transparent focus:border-gradient-to-r focus:from-pink-600 focus:to-blue-400 focus:ring-2 focus:ring-pink-500 outline-none transition-colors duration-300 cursor-pointer"
           autoComplete="email"
         />
       </div>
@@ -59,13 +59,13 @@ const ContactForm: React.FC<ContactFormProps> = ({ autocomplete }) => {
           placeholder="Your Message"
           required
           rows={6}
-          className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border-2 border-transparent focus:border-gradient-to-r focus:from-purple-400 focus:via-pink-500 focus:to-red-500 focus:ring-2 focus:ring-pink-500 outline-none transition-colors duration-300 resize-none cursor-pointer"
+          className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border-2 border-transparent focus:border-gradient-to-r focus:from-pink-600 focus:to-blue-400 focus:ring-2 focus:ring-pink-500 outline-none transition-colors duration-300 resize-none cursor-pointer"
           autoComplete="off"
         />
       </div>
       <button
         type="submit"
-        className="w-full px-8 py-3 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white rounded-lg hover:bg-gradient-to-r hover:from-purple-700 hover:via-pink-700 hover:to-red-700 transition-colors duration-300 cursor-pointer"
+        className="w-full px-8 py-3 bg-gradient-to-r from-pink-600 to-blue-400 text-white rounded-lg hover:bg-gradient-to-r hover:from-purple-700 hover:via-pink-700 hover:to-red-700 transition-colors duration-300 cursor-pointer"
       >
         Send Message
       </button>

@@ -43,7 +43,7 @@ export default function Portfolio() {
         >
           <Link
             to="/works"
-            className="inline-block px-8 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors duration-300 sm:px-6 sm:py-2"
+            className="inline-block px-8 py-3 bg-gradient-to-r from-pink-600 to-blue-400 text-white rounded-lg hover:bg-pink-700 transition-colors duration-300 sm:px-6 sm:py-2"
           >
             View All Projects
           </Link>
