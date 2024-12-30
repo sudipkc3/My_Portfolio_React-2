@@ -4,6 +4,8 @@ import { Calendar, Clock } from 'lucide-react';
 import { fadeIn } from '../../utils/animations';
 import BlogModal from './BlogModal';
 import { getBlogPost } from '../../utils/blogUtils';
+import Lottie from 'lottie-react';
+import animationData from '../shared/Animation JSON/Arrow 02.json';
 
 interface BlogCardProps {
   id: string;
@@ -68,11 +70,17 @@ export default function BlogCard({ id, title, excerpt, image, date, readTime, ca
 
           <motion.button
             onClick={handleReadMore}
-            className="inline-block text-pink-600 dark:text-pink-500 hover:text-pink-700 dark:hover:text-pink-400"
+            className="inline-flex items-center text-pink-600 dark:text-pink-500 hover:text-pink-700 dark:hover:text-pink-400"
             whileHover={{ x: 5 }}
             transition={{ duration: 0.2 }}
           >
-            Read More →
+            Read More 
+            <Lottie 
+              animationData={animationData}
+              loop={true}
+              autoplay={true}
+              className="inline-block ml-2 w-6 h-6"
+            />
           </motion.button>
         </div>
       </motion.article>

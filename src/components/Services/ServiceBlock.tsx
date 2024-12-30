@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { LucideIcon } from 'lucide-react';
 import { fadeIn } from '../../utils/animations';
+import Lottie from 'lottie-react';
+import arrowAnimation from '../shared/Animation JSON/Arrow 01.json';
 
 interface ServiceBlockProps {
   icon: LucideIcon;
@@ -40,15 +42,16 @@ export default function ServiceBlock({ icon: Icon, title, description, color, in
         </p>
 
         <motion.div
-          className="mt-6"
+          className="mt-6 flex items-center"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
           <button 
             onClick={onLearnMore}
-            className="text-gray-900 dark:text-white font-medium group-hover:text-pink-600 dark:group-hover:text-pink-500 transition-colors duration-300"
+            className="inline-flex items-center text-gray-900 dark:text-white font-medium group-hover:text-pink-600 dark:group-hover:text-pink-500 transition-colors duration-300"
           >
-            Learn More →
+            Learn More
+            <Lottie animationData={arrowAnimation} className="w-6 h-6 ml-2" />
           </button>
         </motion.div>
       </div>

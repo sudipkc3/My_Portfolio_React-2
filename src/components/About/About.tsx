@@ -4,6 +4,8 @@ import TabButton from './TabButton';
 import SkillsList from './SkillsList';
 import { fadeIn, staggerContainer, slideIn } from '../../utils/animations';
 import AnimatedText from '../shared/AnimatedText';
+import Lottie from 'lottie-react';
+import animationData from '../shared/Animation JSON/Here Arrow.json';
 
 export default function About() {
   const [activeTab, setActiveTab] = useState('skills');
@@ -127,16 +129,20 @@ export default function About() {
                 className="relative rounded-xl border shadow-2xl w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
               />
             </motion.div>
-
             <motion.div 
-              className="space-y-6 md:space-y-8 h-full"
+              className="md:space-y-0 h-full relative"
               variants={fadeIn('left')}
-              >
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <Lottie animationData={animationData} className="w-24 h-24 absolute top-[30px] left-[-80px] z-10 transform -rotate-90" />
+
               <AnimatedText
                 text="About Me"
                 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white"
               />
-              
+
               <motion.p 
                 className="text-base md:text-lg text-gray-600 dark:text-gray-400 text-justify"
                 variants={fadeIn('up', 0.2)}

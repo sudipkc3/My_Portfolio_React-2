@@ -4,6 +4,8 @@ import { staggerContainer, fadeIn } from '../utils/animations';
 import AnimatedText from '../components/shared/AnimatedText';
 import BlogCard from '../components/Blog/BlogCard';
 import { getBlogPost, getAllBlogSlugs } from '../utils/blogUtils'; // Import the function to get all blog slugs
+import LottieIcon from '../components/shared/LottieIcon';
+import backgroundAnimation from '../components/shared/Animation JSON/Background 02.json';
 
 interface BlogPost {
   id: string;
@@ -54,14 +56,21 @@ export default function Blog() {
         animate="visible"
       >
         <motion.div 
-          className="text-center mb-8"
+          className="text-center mb-8 relative"
           variants={fadeIn('up')}
         >
+          <div className="absolute inset-0 z-0 flex justify-center items-center">
+            <LottieIcon 
+              animationData={backgroundAnimation} 
+              width={300} 
+              height={200} 
+            />
+          </div>
           <AnimatedText 
             text="Latest Blog Posts"
-            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 pt-6 overflow-visible"
+            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 pt-6 relative z-10 overflow-visible"
           />
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto relative z-10">
             Thoughts, tutorials, and insights about design and development
           </p>
         </motion.div>
