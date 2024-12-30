@@ -1,9 +1,10 @@
-const CACHE_NAME = 'portfolio-cache-v3.1';
+const CACHE_NAME = 'my-pwa-cache-v2.1'; // Update cache name to ensure old cache is replaced
+
 const urlsToCache = [
   '/',                       // Main page
   '/index.html',             // HTML file
-  '/assets/Styles.css',  //  CSS file path
-  '/assets/Script.js',   //  JS file path
+  '/assets/Styles.css',      // CSS file path
+  '/assets/Script.js',       // JS file path
   '/Images/Logo.png',        // Logo image path
   '/Images/ME.jpg',          // About me image file
   '/Images/Container right.jpg' // Hero section image file
@@ -14,20 +15,7 @@ self.addEventListener('install', event => {
   self.skipWaiting(); // Force the service worker to activate immediately
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
-      return Promise.all(
-        urlsToCache.map(url => {
-          return cache.add(url).catch(error => {
-            return fetch(url).then(response => {
-              if (!response.ok) {
-                throw new Error(`Request for ${url} failed with status ${response.status}`);
-              }
-              return cache.put(url, response);
-            }).catch(fetchError => {
-              console.error(`Failed to fetch and cache ${url}:`, fetchError);
-            });
-          });
-        })
-      );
+      return cache.addAll(urlsToCache);
     }).catch(error => {
       console.error('Failed to open cache:', error);
     })
@@ -36,33 +24,32 @@ self.addEventListener('install', event => {
 
 // Fetch Event: Serve Cached Files
 self.addEventListener('fetch', event => {
-  if (event.request.mode === 'navigate') {
-    // Network-first for HTML files
-    event.respondWith(
-      fetch(event.request).catch(() => caches.match(event.request))
-    );
-  } else {
-    // Cache-first for other files
-    event.respondWith(
-      caches.match(event.request).then(response => {
-        return response || fetch(event.request);
-      })
-    );
-  }
+  event.respondWith(
+    fetch(event.request).then(response => {
+      // Clone and cache the response
+      const responseClone = response.clone();
+      caches.open(CACHE_NAME).then(cache => {
+        cache.put(event.request, responseClone);
+      });
+      return response; // Return the fetched response
+    }).catch(() => {
+      return caches.match(event.request); // Fallback to cache if offline
+    })
+  );
 });
 
 // Activate Event: Clean Up Old Caches
 self.addEventListener('activate', event => {
-  const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
     caches.keys().then(cacheNames =>
       Promise.all(
         cacheNames.map(cacheName => {
-          if (!cacheWhitelist.includes(cacheName)) {
+          if (cacheName !== CACHE_NAME) {
             return caches.delete(cacheName);
           }
         })
       )
     )
   );
+  event.waitUntil(clients.claim()); // Ensures the updated service worker takes control of all open tabs
 });
