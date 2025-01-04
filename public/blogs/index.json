@@ -1,5 +1,16 @@
 [
   {
+    "id": "blog08",
+    "title": "Learning to Create Interactive Prototypes",
+    "summary": "This blog shares my journey through my first design challenge, designing a fitness app interface. It highlights the skills I gained, the confidence I built, and the lessons I learned about staying user-focused and embracing iteration to grow as a designer.",
+    "coverImage": "/blogs/Blogs_Images/Blog08.jpg",
+    "category": "Prototyping",
+    "date": "2023-10-04",
+    "readTime": "6 min read",
+    "slug": "Learning-to-Create-Interactive-Prototypes",
+    "link": "/blogs/blog08"
+  },
+  {
     "id": "blog07",
     "title": "Participating in My First Design Challenge",
     "summary": "This blog shares my journey through my first design challenge, designing a fitness app interface. It highlights the skills I gained, the confidence I built, and the lessons I learned about staying user-focused and embracing iteration to grow as a designer.",
