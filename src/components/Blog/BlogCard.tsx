@@ -6,7 +6,6 @@ import Lottie from 'lottie-react';
 import animationData from '../shared/Animation JSON/Arrow 02.json';
 
 interface BlogCardProps {
-  id: string;
   title: string;
   excerpt: string;
   image: string;
@@ -15,7 +14,6 @@ interface BlogCardProps {
   category: string;
   slug: string;
   index: number;
-  link:string;
 }
     
 export default function BlogCard({ title, excerpt, image, date, readTime, category, slug, index }: BlogCardProps) {
