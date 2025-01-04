@@ -9,7 +9,7 @@ export interface Work {
 
 export const works: Work[] = [
   {
-    id: 'landing-page',
+    id: 'Cook-it-Yourself',
     title: 'Cook it Yourself',
     description: 'The Recipe Sharing Website is a web-based platform where users can explore, share, and discover a wide variety of recipes. Users can add their own recipes, rate recipes shared by others, and bookmark their favorite ones. The website also includes an advanced search functionality, a recommendation system based on user preferences and ingredients, and nutritional value calculations for added recipes.',
     image: "/Work_Images/CIY Page.png",
@@ -27,7 +27,7 @@ export const works: Work[] = [
   {
     id: 'green-thread',
     title: 'Green Thread',
-    description: 'An e-commerce platform for eco-friendly fashion with a vibrant and intuitive interface.',
+    description: 'An e-commerce platform for eco-friendly fashion, showcasing a vibrant and intuitive interface, thoughtfully designed to promote sustainability, enhance user experience, and support conscious shopping with seamless navigation and engaging features.',
     image: '/Work_Images/Shopping.png',
     link: "https://www.figma.com/design/mt9Kd9hTsL5nRlccJ6eX6D/GreenThread?node-id=103-183&t=G4j4UZtYJG5ja0QV-1",
     tags: ['Wireframe', 'E-commerce', 'UI/UX', 'Figma', 'Design', 'Responsive']
@@ -35,8 +35,8 @@ export const works: Work[] = [
   {
     id: 'crypto-trading',
     title: 'Crypto Trading',
-    description: 'An iOS app crafted for cryptocurrency trading with a sleek and user-friendly interface.',
-    image: '/Work_Images/Trading.png',
+    description: 'An iOS app crafted for cryptocurrency trading, featuring a sleek and user-friendly interface, meticulously designed in Figma prototyped for seamless interaction, and rigorously optimized to meet the demands of modern traders, offering advanced features and an intuitive experience.',
+    image: '/Work_Images/Crypto-Trading.jpg',
     link: 'https://www.figma.com/design/psqf0KtNhpW36KCy0KWvra/Untitled',
     tags: ['iOS', 'Crypto', 'Trading']
   },
@@ -44,7 +44,7 @@ export const works: Work[] = [
     id: 'Online Shopping App',
     title: 'Online Shopping App',
     description: 'Designed the complete UI for an e-commerce app, including wireframing, prototyping, and creating visually appealing, user-centric interfaces. Focused on delivering an intuitive shopping experience by optimizing navigation, enhancing usability, and aligning with modern design trends to meet user needs effectively.',
-    image: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/Work_Images/Online-Shopping-hands.jpg',
     link: "#",
     tags: ['Wireframe', 'E-commerce', 'UI/UX', 'Figma', 'Design', 'Responsive']
   },
@@ -52,7 +52,7 @@ export const works: Work[] = [
     id: 'Quest Hub',
     title: 'Quest Hub',
     description: 'Join tournaments, team up in multiplayer groups, stream your gameplay, and explore reviews of your favorite video games—all in one place. QuestHub connects gamers worldwide for competition, collaboration, and community.',
-    image: 'https://images.unsplash.com/photo-1486572788966-cfd3df1f5b42?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/Work_Images/Quest-Hub.jpg',
     link: "https://www.figma.com/design/qEK2K1nOzNXAKalUmdoQ8E/Gaming-Community?node-id=0-1&t=cAKlJ5Q1sXRKr0G0-1",
     tags: ['Wireframe', 'E-commerce', 'UI/UX', 'Figma', 'Design', 'Responsive']
   },
@@ -60,7 +60,7 @@ export const works: Work[] = [
     id: 'Landing page for makeup',
     title: 'Landing page for makeup',
     description: 'Crafted in Figma, this landing page celebrates beauty and elegance, with a focus on user experience and sleek visuals that highlight the products our skin deserves! From bold call-to-actions to a polished, inviting layout, the goal is to make beauty accessible and appealing. Perfecting every pixel for a seamless shopping journey that feels as good as the products themselves!',
-    image: 'https://plus.unsplash.com/premium_photo-1684407616442-8d5a1b7c978e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/Work_Images/Landing-page-for-Makeup.jpg',
     link: "https://www.figma.com/proto/fJfiA2IwYAu912jyZSmbwX/Practice?page-id=18%3A2&node-id=46-2&node-type=frame&viewport=694%2C195%2C0.31&t=ZPwnarNTK0BL8xgw-1&scaling=min-zoom&content-scaling=fixed",
     tags: ['Wireframe', 'E-commerce', 'UI/UX', 'Figma', 'Design', 'Responsive']
   },

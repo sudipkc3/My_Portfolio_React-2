@@ -22,9 +22,13 @@ export default defineConfig({
       }
     },
   },
+  assetsInclude: ['**/*.md'],  // Tell Vite to handle .md files as assets
   server: {
     watch: {
       ignored: ['**/service-worker.js']
+    },
+    fs: {
+      allow: ['..']  // Allow serving files from one level up
     }
   }
 })

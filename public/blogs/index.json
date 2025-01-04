@@ -1,9 +1,79 @@
 [
-    "Blog07",
-    "Blog06",
-    "Blog05",
-    "Blog04",
-    "Blog03",
-    "Blog02",
-    "Blog01"
+  {
+    "id": "blog07",
+    "title": "Participating in My First Design Challenge",
+    "summary": "This blog shares my journey through my first design challenge, designing a fitness app interface. It highlights the skills I gained, the confidence I built, and the lessons I learned about staying user-focused and embracing iteration to grow as a designer.",
+    "coverImage": "/blogs/Blogs_Images/Blog07.jpg",
+    "category": "Design",
+    "date": "2023-10-01",
+    "readTime": "5 min read",
+    "slug": "participating-in-my-first-design-challenge",
+    "link": "/blogs/blog07"
+  },
+  {
+    "id": "blog06",
+    "title": "My Journey Through Visual Design Basics",
+    "summary": "I share my journey learning typography and color theory, focusing on purposeful font and color choices to create impactful, accessible designs. Through practice and feedback, I’ve grown in visual design.",
+    "coverImage": "/blogs/Blogs_Images/Blog06.jpg",
+    "category": "Visual Design",
+    "date": "2023-09-25",
+    "readTime": "4 min read",
+    "slug": "My-Journey-Through-Visual-Design-Basics",
+    "link": "/blogs/blog06"
+  },
+  {
+    "id": "blog05",
+    "title": "Mistakes, Challenges, and Lessons",
+    "summary": "Creating my first wireframe was a journey of trial, error, and growth. I learned to simplify designs, map user journeys, and embrace iteration to improve usability. This experience highlighted the importance of planning, seeking feedback, and always keeping the user’s needs in mind.",
+    "coverImage": "/blogs/Blogs_Images/Blog05.jpg",
+    "category": "Figma",
+    "date": "2023-09-20",
+    "readTime": "6 min read",
+    "slug": "Mistakes-Challenges-and-Lessons",
+    "link": "/blogs/blog05"
+  },
+  {
+    "id": "blog04",
+    "title": "What I Learned About User Research in My First Week",
+    "summary": "In my first week of user research, I learned the importance of understanding users through personas, surveys, and interviews. This helped me empathize with users and refine my designs to meet their needs. The experience emphasized the value of empathy, iteration, and collaboration in UX design.",
+    "coverImage": "/blogs/Blogs_Images/Blog04.jpg",
+    "category": "UX",
+    "date": "2023-09-15",
+    "readTime": "3 min read",
+    "slug": "What-I-Learned-About-User-Research-in-My-First-Week",
+    "link": "/blogs/blog04"
+  },
+  {
+    "id": "blog03",
+    "title": "My First Experience with Figma and Adobe XD",
+    "summary": "I share my first experience with Figma and Adobe XD, highlighting Figma's collaborative and user-friendly features versus Adobe XD's integration with Adobe tools and advanced prototyping. Both tools offer unique strengths, with Figma being my preferred choice for its accessibility.",
+    "coverImage": "/blogs/Blogs_Images/Blog03.jpg",
+    "category": "Tools",
+    "date": "2023-09-10",
+    "readTime": "7 min read",
+    "slug": "My-First-Experience-with-Figma-and-Adobe-XD",
+    "link": "/blogs/blog03"
+  },
+  {
+    "id": "blog02",
+    "title": "Understanding the Basics of UI/UX Design  ",
+    "summary": "I explore the foundational elements of UI/UX design, from understanding design principles and usability to adopting user-centric thinking. I also share tips for beginners, such as starting with basic tools like Figma and Adobe XD and practicing consistently to improve.",
+    "coverImage": "/blogs/Blogs_Images/Blog02.jpg",
+    "category": "UI/UX",
+    "date": "2023-09-05",
+    "readTime": "5 min read",
+    "slug": "Understanding-the-Basics-of-UI-UX-Design",
+    "link": "/blogs/blog02"
+  },
+  {
+    "id": "blog01",
+    "title": "Why I Chose to Become a UI/UX Designer",
+    "summary": "I was drawn to UI/UX design by my fascination with user interactions and a desire to improve digital experiences. Starting with basic skills and personal projects, I gained confidence and passion for problem-solving. The constant learning keeps me motivated.",
+    "coverImage": "/blogs/Blogs_Images/Blog01.jpg",
+    "category": "UI/UX",
+    "date": "2023-09-01",
+    "readTime": "4 min read",
+    "slug": "Why-I-Chose-to-Become-a-UI-UX-Designer",
+    "link": "/blogs/blog01"
+  }
 ]

@@ -1,4 +1,5 @@
 ---
+id: Blog 6
 title: Typography and Color Theory: My Journey Through Visual Design Basics
 date: Apr 21, 2023
 author: Sudip KC
@@ -87,4 +88,3 @@ Design isn’t just about making things look good—it’s about making things f
 3. **Color Contrast Checker**: (https://colourcontrast.cc/)  Color Contrast Checker.
 4. **Adobe Color Wheel**: (https://color.adobe.com/create/color-wheel)  Adobe Color Wheel for different features.
 5. **Paint Toys**: (https://paint.toys/)  For playing around.
-

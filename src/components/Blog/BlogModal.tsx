@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import BlogPost from './BlogPost';
+import BlogContent from './BlogContent';
 
 interface BlogModalProps {
   isOpen: boolean;
@@ -49,7 +50,7 @@ export default function BlogModal({ isOpen, onClose, frontmatter, content }: Blo
             </div>
 
             <div className="h-full overflow-y-auto custom-scrollbar">
-              <BlogPost frontmatter={frontmatter} content={content} />
+              <BlogPost frontmatter={frontmatter} content={<BlogContent content={content} />} />
             </div>
           </motion.div>
         </>

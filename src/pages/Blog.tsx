@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { staggerContainer, fadeIn } from '../utils/animations';
 import AnimatedText from '../components/shared/AnimatedText';
 import BlogCard from '../components/Blog/BlogCard';
-import { getBlogPost, getAllBlogSlugs } from '../utils/blogUtils'; // Import the function to get all blog slugs
 import LottieIcon from '../components/shared/LottieIcon';
 import backgroundAnimation from '../components/shared/Animation JSON/Background 01.json';
 
@@ -15,6 +14,8 @@ interface BlogPost {
   date: string;
   readTime: string;
   category: string;
+  slug: string;
+ link:string;
 }
 
 export default function Blog() {
@@ -23,21 +24,19 @@ export default function Blog() {
   useEffect(() => {
     const loadPosts = async () => {
       try {
-        const slugs = await getAllBlogSlugs(); // Fetch all blog slugs dynamically
-        const loadedPosts = await Promise.all(
-          slugs.map(async (slug) => {
-            const { frontmatter } = await getBlogPost(slug);
-            return {
-              id: slug,
-              title: frontmatter.title,
-              excerpt: frontmatter.excerpt,
-              image: frontmatter.coverImage,
-              date: frontmatter.date,
-              readTime: frontmatter.readTime,
-              category: frontmatter.category
-            };
-          })
-        );
+        const response = await fetch('/blogs/index.json');
+        const data = await response.json();
+        const loadedPosts = data.map((post: any) => ({
+          id: post.id,
+          title: post.title,
+          excerpt: post.summary,
+          image: post.coverImage || '',
+          date: post.date,
+          readTime: post.readTime,
+          category: post.category || 'Uncategorized',
+          slug: post.slug,
+          link:post.link
+        }));
         setPosts(loadedPosts);
       } catch (error) {
         console.error('Error loading posts:', error);
@@ -49,24 +48,24 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-2">
-      <motion.div 
+      <motion.div
         className="container mx-auto px-6 py-6"
         variants={staggerContainer}
         initial="hidden"
         animate="visible"
       >
-        <motion.div 
+        <motion.div
           className="text-center mb-8 relative"
           variants={fadeIn('up')}
         >
           <div className="absolute inset-0 z-0 flex justify-center items-center">
-            <LottieIcon 
-              animationData={backgroundAnimation} 
-              width={300} 
-              height={200} 
+            <LottieIcon
+              animationData={backgroundAnimation}
+              width={300}
+              height={200}
             />
           </div>
-          <AnimatedText 
+          <AnimatedText
             text="Latest Blog Posts"
             className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 pt-6 relative z-10 overflow-visible"
           />

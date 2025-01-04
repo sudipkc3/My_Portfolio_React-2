@@ -121,7 +121,7 @@ export default function About() {
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             <motion.div 
-              className="relative border h-[300px] md:h-[400px] lg:h-[700px] w-full md:w-[300px] lg:w-[500px] flex justify-center items-center rounded-xl"
+              className="relative border h-full w-full md:h-[400px] lg:h-[700px] md:w-[300px] lg:w-[500px] flex justify-center items-center rounded-xl"
               variants={fadeIn('right')}
             >
               <img

@@ -1,4 +1,5 @@
 ---
+id: Blog 3
 title: Exploring Design Tools: My First Experience with Figma and Adobe XD
 date: Apr 13, 2023
 author: Sudip KC

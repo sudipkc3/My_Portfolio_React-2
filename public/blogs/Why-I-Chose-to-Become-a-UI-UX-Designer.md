@@ -1,4 +1,5 @@
 ---
+id: Blog 1
 title: Why I Chose to Become a UI/UX Designer  
 date: Apr 7, 2023  
 author: Sudip KC  

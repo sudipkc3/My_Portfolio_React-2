@@ -1,4 +1,5 @@
 ---
+id: Blog 7
 title: Participating in My First Design Challenge: What I Gained 
 date: Apr 25, 2023 
 author: Sudip KC 
@@ -73,4 +74,3 @@ The final design became a key addition to my portfolio. It demonstrated my abili
 Participating in my first design challenge was a transformative experience. It pushed me to think critically, act creatively, and grow as a designer. For anyone considering joining a design challenge, my advice is simple: take the leap. The skills and confidence you gain will be worth every moment of effort.
 
 Design challenges are more than competitions; they’re opportunities to learn, connect, and create. And in the world of design, that’s what it’s all about.
-

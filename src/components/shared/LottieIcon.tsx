@@ -1,5 +1,4 @@
-import React from 'react';
-import Lottie from 'lottie-react';
+import React, { lazy, Suspense } from 'react';
 
 interface LottieIconProps {
   animationData: object;
@@ -8,15 +7,19 @@ interface LottieIconProps {
   className?: string;
 }
 
+const LazyLottie = lazy(() => import('lottie-react'));
+
 const LottieIcon: React.FC<LottieIconProps> = ({ animationData, width = 200, height = 200, className }) => {
   return (
     <div style={{ width, height }} className={className}>
-      <Lottie 
-        animationData={animationData} 
-        loop={true} 
-        rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }} 
-        className="fill-current text-pink-500" 
-      />
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyLottie 
+          animationData={animationData} 
+          loop={true} 
+          rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }} 
+          className="fill-current text-pink-500" 
+        />
+      </Suspense>
     </div>
   );
 };

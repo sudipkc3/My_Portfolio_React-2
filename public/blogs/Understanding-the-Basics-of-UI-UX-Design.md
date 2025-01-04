@@ -1,4 +1,5 @@
 ---
+id: Blog 2
 title: First Steps: Understanding the Basics of UI/UX Design  
 date: Apr 10, 2023 
 author: Sudip KC  

@@ -1,4 +1,5 @@
 ---
+id: Blog 4
 title: What I Learned About User Research in My First Week
 date: Apr 15, 2023
 author: Sudip KC
@@ -50,4 +51,3 @@ Collaboration Enhances Results: Sharing research findings with teammates sparked
 My first week of user research was a crash course in empathy, curiosity, and adaptability. It showed me the power of understanding users and reinforced the importance of designing with their needs in mind.
 
 For anyone new to user research, my advice is simple: start small, ask lots of questions, and always keep the user at the heart of your process. The insights you uncover will make all the difference in creating designs that truly matter.
-

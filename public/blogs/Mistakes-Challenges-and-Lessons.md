@@ -1,4 +1,5 @@
 ---
+id: Blog 5
 title: Creating My First Wireframe: Mistakes, Challenges, and Lessons
 date: Apr 18, 2023
 author: Sudip KC
@@ -52,4 +53,3 @@ Realizing my mistakes, I took a step back and reevaluated my approach. Here’s 
 Creating my first wireframe was a challenging but rewarding experience. It taught me the importance of planning, simplicity, and user focus. While the process was far from smooth, it laid a strong foundation for my growth as a designer.
 
 For anyone embarking on their first wireframe, my advice is this: don’t be afraid to make mistakes. Every challenge is an opportunity to learn, and each lesson brings you closer to creating designs that truly make a difference. Happy wireframing!
-
