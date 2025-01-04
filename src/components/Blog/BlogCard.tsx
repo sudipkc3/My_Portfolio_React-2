@@ -18,7 +18,7 @@ interface BlogCardProps {
   link:string;
 }
     
-export default function BlogCard({ id, title, excerpt, image, date, readTime, category, slug, index, link }: BlogCardProps) {
+export default function BlogCard({ title, excerpt, image, date, readTime, category, slug, index }: BlogCardProps) {
   return (
     <motion.article
       variants={fadeIn('up', index * 0.2)}
