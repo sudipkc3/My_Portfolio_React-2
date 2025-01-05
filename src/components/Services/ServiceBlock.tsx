@@ -21,11 +21,11 @@ export default function ServiceBlock({ icon: Icon, title, description, color, in
     >
       <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-10 group-hover:opacity-20 transition-opacity duration-500`} />
       
-      <div className="relative p-8 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 transition-transform duration-500 group-hover:-translate-y-2">
+      <div className="relative p-8 bg-purple-100 dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 transition-transform duration-500 group-hover:-translate-y-2">
         <motion.div
           whileHover={{ 
-            rotate: [0, -10, 10, -10, 0],
-            scale: 1.1
+            scale: 1.2, 
+            rotate: 30 
           }}
           transition={{ duration: 0.5 }}
           className="mb-6"

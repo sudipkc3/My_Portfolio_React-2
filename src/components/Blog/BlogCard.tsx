@@ -20,7 +20,7 @@ export default function BlogCard({ title, excerpt, image, date, readTime, catego
   return (
     <motion.article
       variants={fadeIn('up', index * 0.2)}
-      className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg"
+      className="bg-purple-100 dark:bg-gray-600 rounded-xl overflow-hidden shadow-lg"
     >
         <div className="relative h-48 overflow-hidden">
           <Link to={`/blog/${slug}`} className='block'>

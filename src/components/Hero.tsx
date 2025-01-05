@@ -7,8 +7,8 @@ import ModernDownloadButton from './shared/ModernDownloadButton'; // Import the 
 export default function Hero() {
   const socialLinks = [
     { href: 'https://github.com/Sudeepkaycee289', icon: Github, label: 'GitHub' }, // Ensure all icons are correctly used
-    { href: 'https://www.facebook.com/sudipkc289', icon: Facebook, label: 'Facebook' },
-    { href: 'https://www.instagram.com/sudipkc289/', icon: Instagram, label: 'Instagram' },
+    { href: 'https://www.facebook.com/kcsudip3', icon: Facebook, label: 'Facebook' },
+    { href: 'https://www.instagram.com/kcsudip3/', icon: Instagram, label: 'Instagram' },
     { href: 'https://www.linkedin.com/in/sudip-kc-946097211/', icon: Linkedin, label: 'LinkedIn' },
   ];
 
@@ -84,10 +84,9 @@ export default function Hero() {
   }, [titleIndex]);
 
   return (
-    <section className="min-h-screen pt-20 relative overflow-hidden">
+    <section className="pt-10 relative overflow-hidden"> {/* Section with left and right margin */}
       {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-pink-100 via-white to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-pink-900 opacity-50" />
-
+      <div className="absolute inset-0 bg-gradient-to-r from-pink-100 via-pink-50 to-pink-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700" /> {/* Adjusted to fill container */}
       <div className="container mx-auto px-6 py-12 relative">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <motion.div 

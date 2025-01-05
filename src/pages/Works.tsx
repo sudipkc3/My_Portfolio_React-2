@@ -8,7 +8,7 @@ import backgroundAnimation from '../components/shared/Animation JSON/Background 
 
 export default function Works() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-2">
+    <div className="min-h-screen bg-gradient-to-r from-pink-100 via-pink-50 to-pink-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 pt-2">
       <motion.div 
         className="container mx-auto px-6 py-12"
         variants={staggerContainer}

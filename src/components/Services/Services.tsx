@@ -173,7 +173,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="services" className="py-20 bg-gradient-to-r from-pink-100 via-pink-50 to-pink-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700">
       <motion.div 
         className="container mx-auto px-6"
         variants={staggerContainer}

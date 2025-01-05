@@ -111,7 +111,7 @@ export default function About() {
 
   return (
     <>
-      <section id="about" className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section id="about" className="py-10 bg-gradient-to-r from-pink-100 via-pink-50 to-pink-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700">
         <motion.div 
           className="container mx-auto px-4 md:px-8 lg:px-16 flex justify-center items-center"
           variants={staggerContainer}
@@ -159,7 +159,7 @@ export default function About() {
                 className="space-y-4 md:space-y-6"
                 variants={fadeIn('up', 0.3)}
               >
-                <div className="flex flex-wrap gap-2 md:gap-4">
+                <div className="flex flex-wrap gap-2 md:gap-4 mt-2">
                   {Object.keys(tabs).map((tab) => (
                     <TabButton
                       key={tab}
@@ -172,7 +172,7 @@ export default function About() {
                 </div>
 
                 <motion.div 
-                  className="min-h-[300px] md:min-h-[400px] bg-gray-100 dark:bg-gray-900 rounded-xl p-4 md:p-6"
+                  className="min-h-[200px] md:min-h-[300px] bg-pink-200 dark:bg-gray-900 rounded-xl p-4 md:p-6"
                   initial={false}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5 }}

@@ -10,20 +10,16 @@ interface ServiceCardProps {
 export default function ServiceCard({ icon: Icon, title, description }: ServiceCardProps) {
   return (
     <motion.div 
-      className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700"
+      className=" dark:bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700"
       whileHover={{ y: -10 }}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
     >
-      <motion.div
-        whileHover={{ 
-          rotate: [0, -10, 10, -10, 0],
-          scale: 1.1
-        }}
-        transition={{ duration: 0.5 }}
-      >
-        <Icon className="w-12 h-12 text-pink-600 dark:text-pink-500 mb-6" />
+      <motion.div>
+        <motion.div whileHover={{ scale: 1.2, rotate: 30 }}>
+          <Icon className="w-12 h-12 text-pink-600 dark:text-pink-500 mb-6" />
+        </motion.div>
       </motion.div>
       
       <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{title}</h3>

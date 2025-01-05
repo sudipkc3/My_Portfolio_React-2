@@ -16,7 +16,7 @@ export default function WorkCard({ title, description, image, link, tags, index 
   return (
     <motion.div
       variants={fadeIn('up', index * 0.2)}
-      className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg max-w-xs mx-auto sm:max-w-none"
+      className="bg-purple-100 dark:bg-gray-600 rounded-xl overflow-hidden shadow-lg max-w-xs mx-auto sm:max-w-none"
     >
       <div className="relative h-64 overflow-hidden sm:h-48">
         <AnimatedImage
@@ -28,14 +28,14 @@ export default function WorkCard({ title, description, image, link, tags, index 
       </div>
 
       <div className="p-6 sm:p-4">
-        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:text-xl">{title}</h3>
-        <p className="text-gray-600 dark:text-gray-400 mb-4 sm:mb-2 text-sm sm:text-base">{description}</p>
+        <h3 className="text-2xl font-bold text-white dark:text-gray mb-3 sm:text-xl">{title}</h3>
+        <p className="text-gray-600 dark:text-white mb-4 sm:mb-2 text-sm sm:text-base">{description}</p>
         
         <div className="flex flex-wrap gap-2 mb-4 sm:mb-2">
           {tags.map((tag) => (
             <span 
               key={tag}
-              className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full text-xs sm:text-sm"
+              className="px-3 py-1 bg-gray-100 dark:bg-Fuchsia-400 text-white-950 dark:text-black rounded-full text-xs sm:text-sm"
             >
               {tag}
             </span>

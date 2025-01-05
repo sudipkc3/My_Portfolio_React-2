@@ -34,16 +34,21 @@ export default function ServiceModal({ isOpen, onClose, service }: ServiceModalP
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 100, scale: 0.9 }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-4 md:inset-10 bg-white dark:bg-gray-900 rounded-2xl shadow-2xl z-50 overflow-hidden"
+            className="fixed inset-4 md:inset-10 bg-purple-100 dark:bg-gray-900 rounded-2xl shadow-2xl z-50 overflow-hidden"
           >
             <div className="absolute top-4 right-4 z-10">
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={onClose}
-                className="p-2 rounded-full bg-white/10 backdrop-blur-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                className="p-2 rounded-full bg-black/10 backdrop-blur-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
-                <X className="w-6 h-6" />
+                <motion.div
+                  whileHover={{ rotate: 90 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <X className="w-6 h-6" />
+                </motion.div>
               </motion.button>
             </div>
 

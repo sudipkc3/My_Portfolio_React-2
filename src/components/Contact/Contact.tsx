@@ -5,13 +5,13 @@ import { motion } from 'framer-motion';
 export default function Contact() {
   const socialLinks = [
     { icon: Github, href: 'https://github.com/Sudeepkaycee289', label: 'GitHub' },
-    { icon: Facebook, href: 'https://www.facebook.com/sudipkc289', label: 'Facebook' },
-    { icon: Instagram, href: 'https://www.instagram.com/sudipkc289/', label: 'Instagram' },
+    { icon: Facebook, href: 'https://www.facebook.com/kcsudip3', label: 'Facebook' },
+    { icon: Instagram, href: 'https://www.instagram.com/kcsudip3', label: 'Instagram' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/sudip-kc-946097211/', label: 'LinkedIn' }
   ];
 
   return (
-    <section id="contact" className="py-6 bg-gradient-to-r from-gray-50 via-gray-100 to-gray-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <section id="contact" className="py-6 bg-gradient-to-r from-pink-100 via-pink-50 to-pink-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700">
       <div className="container mx-auto px-6">
         <motion.h2 
           className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-6"
@@ -34,11 +34,15 @@ export default function Contact() {
               </h3>
               <div className="space-y-4">
                 <p className="flex items-center text-gray-600 dark:text-gray-400">
-                  <Mail className="w-5 h-5 mr-3 text-pink-600" />
+                  <motion.div whileHover={{ scale: 1.2, rotate: 30 }}>
+                    <Mail className="w-5 h-5 mr-3 text-pink-600" />
+                  </motion.div>
                   sudipkc289@gmail.com
                 </p>
                 <p className="flex items-center text-gray-600 dark:text-gray-400">
-                  <Phone className="w-5 h-5 mr-3 text-pink-600" />
+                  <motion.div whileHover={{ scale: 1.2, rotate: 30 }}>
+                    <Phone className="w-5 h-5 mr-3 text-pink-600" />
+                  </motion.div>
                   9806735504
                 </p>
               </div>
@@ -57,9 +61,9 @@ export default function Contact() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-600 dark:text-gray-400 transition-colors duration-300"
-                      whileHover={{ scale: 1.2, rotate: 10 }}
+                      whileHover={{ scale: 1.2, rotate: 30 }}
                     >
-                      <Icon className="w-6 h-6 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-400 hover:via-pink-500 hover:to-red-500" />
+                      <Icon className="w-6 h-6 hover:text-pink-500" />
                     </motion.a>
                   );
                 })}

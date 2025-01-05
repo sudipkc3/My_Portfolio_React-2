@@ -1,11 +1,12 @@
 ---
+id: Blog 9
 title: Learning to Create Interactive Prototypes: My Beginner's Guide
 date: Apr 7, 2023
 author: Sudip KC
 readTime: 6 min read
 category: Design
 excerpt: How I started designing clickable prototypes to bring my ideas to life.
-coverImage: https://images.unsplash.com/photo-1502663958381-2fd19537d9d9?q=80&w=2021&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+coverImage: /blogs/Blogs_Images/Blog08.jpg
 loading: lazy
 ---
 # Learning to Create Interactive Prototypes: My Beginner's Guide
