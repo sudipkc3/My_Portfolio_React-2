@@ -1,4 +1,4 @@
-import { Mail, Phone, Github, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, Github, Facebook, Instagram, Linkedin, MessageSquare} from 'lucide-react';
 import ContactForm from './ContactForm';
 import { motion } from 'framer-motion';
 
@@ -33,18 +33,32 @@ export default function Contact() {
                 Get in Touch
               </h3>
               <div className="space-y-4">
-                <p className="flex items-center text-gray-600 dark:text-gray-400">
+                <p 
+                  className="flex items-center text-gray-600 dark:text-gray-400"
+                  onClick={() => window.open('mailto:sudipkc289@gmail.com')}
+                >
                   <motion.div whileHover={{ scale: 1.2, rotate: 30 }}>
                     <Mail className="w-5 h-5 mr-3 text-pink-600" />
                   </motion.div>
                   sudipkc289@gmail.com
                 </p>
-                <p className="flex items-center text-gray-600 dark:text-gray-400">
+                <p 
+                  className="flex items-center text-gray-600 dark:text-gray-400"
+                  onClick={() => window.open('tel:9806735504')}
+                >
                   <motion.div whileHover={{ scale: 1.2, rotate: 30 }}>
                     <Phone className="w-5 h-5 mr-3 text-pink-600" />
                   </motion.div>
                   9806735504
                 </p>
+                <p className="flex items-center text-gray-600 dark:text-gray-400"
+                onClick={() => window.open('https://wa.me/9806735504')}>
+                  <motion.div whileHover={{ scale: 1.2, rotate: 30 }}>
+                    <MessageSquare className=" w-5 h-5 mr-3 text-pink-600" />
+                  </motion.div>
+                  Contact me
+                </p>
+
               </div>
             </div>
             <div>
@@ -105,7 +119,7 @@ export default function Contact() {
               ease: 'linear',
             }}
           >
-            {"© 2024 Sudip KC. All rights reserved.".split("").map((char, index) => (
+            {"© 2025 Sudip KC. All rights reserved.".split("").map((char, index) => (
               <motion.span
                 key={index}
                 style={{ display: 'inline-block' }}
