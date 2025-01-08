@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 
 export default function Contact() {
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/Sudeepkaycee289', label: 'GitHub' },
+    { icon: Github, href: 'https://github.com/Sudipkc3', label: 'GitHub' },
     { icon: Facebook, href: 'https://www.facebook.com/kcsudip3', label: 'Facebook' },
     { icon: Instagram, href: 'https://www.instagram.com/kcsudip3', label: 'Instagram' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/sudip-kc-946097211/', label: 'LinkedIn' }
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/kcsudip3', label: 'LinkedIn' }
   ];
 
   return (

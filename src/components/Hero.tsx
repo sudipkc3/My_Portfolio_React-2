@@ -6,10 +6,10 @@ import ModernDownloadButton from './shared/ModernDownloadButton'; // Import the 
 
 export default function Hero() {
   const socialLinks = [
-    { href: 'https://github.com/Sudeepkaycee289', icon: Github, label: 'GitHub' }, // Ensure all icons are correctly used
+    { href: 'https://github.com/Sudipkc3', icon: Github, label: 'GitHub' }, // Ensure all icons are correctly used
     { href: 'https://www.facebook.com/kcsudip3', icon: Facebook, label: 'Facebook' },
     { href: 'https://www.instagram.com/kcsudip3/', icon: Instagram, label: 'Instagram' },
-    { href: 'https://www.linkedin.com/in/sudip-kc-946097211/', icon: Linkedin, label: 'LinkedIn' },
+    { href: 'https://www.linkedin.com/in/kcsudip3/', icon: Linkedin, label: 'LinkedIn' },
   ];
 
   const letterAnimation = {
