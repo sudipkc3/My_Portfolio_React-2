@@ -172,7 +172,7 @@ export default function About() {
                 </div>
 
                 <motion.div 
-                  className="min-h-[200px] md:min-h-[300px] bg-pink-200 dark:bg-gray-900 rounded-xl p-4 md:p-6"
+                  className="min-h-[200px] md:min-h-[300px] bg-purple-200 dark:bg-gray-900 rounded-xl p-4 md:p-6"
                   initial={false}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5 }}

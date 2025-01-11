@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Github, Facebook, Instagram, Linkedin } from 'lucide-react'; // Ensure all icons are correctly imported
 import { fadeIn, slideIn } from '../utils/animations';
 import { useState, useEffect } from 'react';
-import ModernDownloadButton from './shared/ModernDownloadButton'; // Import the new component
+import FizzyButton from './shared/FizzyButton';
 
 export default function Hero() {
   const socialLinks = [
@@ -173,7 +173,7 @@ export default function Hero() {
                 );
               })}
             </motion.div>
-            <ModernDownloadButton /> {/* Add the new component here */}
+            <FizzyButton />
           </motion.div>
 
           <motion.div 

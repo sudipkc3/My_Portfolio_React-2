@@ -42,7 +42,7 @@ export default function SkillsList({ skills }: SkillsListProps) {
       {skills.map((skill) => (
         <motion.div 
           key={skill.category} 
-          className="bg-purple-100 dark:bg-gray-800 rounded-xl p-3 md:p-4 shadow-lg border-2 border-purple-200 dark:border-gray-700"
+          className="bg-purple-50 dark:bg-gray-800 rounded-xl p-3 md:p-4 shadow-lg border-2 border-purple-200 dark:border-gray-700"
           variants={item}
           whileHover={{ y: -5 }}
           transition={{ duration: 0.3 }}
