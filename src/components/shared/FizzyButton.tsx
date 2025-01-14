@@ -21,9 +21,8 @@ const FizzyButtonComponent = () => {
 
   const handleDownload = () => {
     if (isOpen) {
-      // Logic to download the CV document
       const link = document.createElement('a');
-      link.href = '/public/Images/Sudip Kc CV.pdf'; // Updated path to your CV document
+      link.href = '/public/Images/Sudip Kc CV.pdf';
       link.download = 'Sudip Kc CV.pdf';
       document.body.appendChild(link);
       link.click();
@@ -35,7 +34,7 @@ const FizzyButtonComponent = () => {
   return (
     <motion.div
       layout
-      data-isOpen={isOpen}
+      data-isopen={isOpen} // Changed from data-isOpen to data-isopen
       initial={{ borderRadius: 50 }}
       className="parent"
       onClick={handleDownload}

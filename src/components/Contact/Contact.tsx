@@ -1,17 +1,12 @@
-import { Mail, Phone, Github, Facebook, Instagram, Linkedin, MessageSquare} from 'lucide-react';
 import ContactForm from './ContactForm';
 import { motion } from 'framer-motion';
+import SocialIcons from '../shared/SocialIcons';
+import { Mail, MessageSquare, Phone } from 'lucide-react';
 
 export default function Contact() {
-  const socialLinks = [
-    { icon: Github, href: 'https://github.com/Sudipkc3', label: 'GitHub' },
-    { icon: Facebook, href: 'https://www.facebook.com/kcsudip3', label: 'Facebook' },
-    { icon: Instagram, href: 'https://www.instagram.com/kcsudip3', label: 'Instagram' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/kcsudip3', label: 'LinkedIn' }
-  ];
 
   return (
-    <section id="contact" className="py-6 bg-gradient-to-r from-pink-100 via-pink-50 to-pink-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700">
+    <section id="contact" className="py-6 bg-gradient-to-r from-blue-200 via-pink-300 to-purple-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700">
       <div className="container mx-auto px-6">
         <motion.h2 
           className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-6"
@@ -65,23 +60,7 @@ export default function Contact() {
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 Follow Me
               </h3>
-              <div className="flex space-x-4">
-                {socialLinks.map((link, index) => {
-                  const Icon = link.icon;
-                  return (
-                    <motion.a
-                      key={index}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-600 dark:text-gray-400 transition-colors duration-300"
-                      whileHover={{ scale: 1.2, rotate: 30 }}
-                    >
-                      <Icon className="w-6 h-6 hover:text-pink-500" />
-                    </motion.a>
-                  );
-                })}
-              </div>
+              <SocialIcons/>
             </div>
             <div>
               <motion.a
