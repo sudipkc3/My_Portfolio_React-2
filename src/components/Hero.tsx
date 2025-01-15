@@ -16,11 +16,7 @@ export default function Hero() {
     }),
   };
 
-  const titles = [
-    "Web Designer",
-    "Frontend Developer",
-    "Web Developer",
-  ];
+  const titles = ["Web Designer", "Frontend Developer", "Web Developer"];
 
   const [currentTitle, setCurrentTitle] = useState("");
   const [titleIndex, setTitleIndex] = useState(0);
@@ -91,7 +87,6 @@ export default function Hero() {
       {/* Adjusted to fill container */}
       <div className="container mx-auto px-6 py-12 relative">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-
           <motion.div
             className="md:w-1/2 text-center md:text-left space-y-6"
             variants={slideIn("left")}
@@ -145,17 +140,18 @@ export default function Hero() {
               {/* Simple mobile view */}
               Hi, I'm Sudip Kc <br></br>from Nepal.
             </div>
-
-            <SocialIcons />
-            <div className="flex space-x-4">
-              <FizzyButton />
-              <button
-                className="bg-purple-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-600 transition duration-300"
-                onClick={handleHireMeClick}
-              >
-                Hire Me
-              </button>
-            </div>
+            <span className="flex flex-col items-center md:items-start gap-4">
+              <SocialIcons />
+              <div className="flex space-x-4 mt-4 md:mt-0">
+                <FizzyButton />
+                <button
+                  className="bg-purple-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-600 transition duration-300"
+                  onClick={handleHireMeClick}
+                >
+                  Hire Me
+                </button>
+              </div>
+            </span>
           </motion.div>
 
           <motion.div
