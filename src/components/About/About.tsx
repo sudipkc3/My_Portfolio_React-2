@@ -128,6 +128,7 @@ export default function About() {
                 src='/Images/ME.jpg'
                 alt="Sudip KC"
                 className="relative rounded-xl border shadow-2xl w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                loading="lazy"
               />
             </motion.div>
             <motion.div 

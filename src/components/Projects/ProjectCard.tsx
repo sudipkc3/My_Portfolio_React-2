@@ -8,9 +8,10 @@ interface ProjectCardProps {
   description: string;
   link: string;
   index: number;
+  alt: string; // Added alt property
 }
 
-export default function ProjectCard({ image, title, description, link, index }: ProjectCardProps) {
+export default function ProjectCard({ image, title, description, link, index, alt }: ProjectCardProps) {
   return (
     <motion.div 
       className="group relative bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 h-[400px] sm:h-[300px]"
@@ -21,7 +22,7 @@ export default function ProjectCard({ image, title, description, link, index }: 
     >
       <motion.img
         src={image}
-        alt={title}
+        alt={alt} // Use alt property
         className="w-full h-full object-cover transition-all duration-500"
         layoutId={`project-image-${index}`}
         whileHover={{ scale: 1.1, filter: 'blur(2px)' }}
@@ -63,4 +64,3 @@ export default function ProjectCard({ image, title, description, link, index }: 
     </motion.div>
   );
 }
-

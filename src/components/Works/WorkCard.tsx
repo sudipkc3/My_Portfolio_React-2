@@ -7,12 +7,13 @@ interface WorkCardProps {
   title: string;
   description: string;
   image: string;
+  alt: string;
   link: string;
   tags: string[];
   index: number;
 }
 
-export default function WorkCard({ title, description, image, link, tags, index }: WorkCardProps) {
+export default function WorkCard({ title, description, image, alt, link, tags, index }: WorkCardProps) {
   return (
     <motion.div
       variants={fadeIn('up', index * 0.2)}
@@ -21,7 +22,7 @@ export default function WorkCard({ title, description, image, link, tags, index 
       <div className="relative h-64 overflow-hidden sm:h-48">
         <AnimatedImage
           src={image}
-          alt={title}
+          alt={alt} // Use alt property
           className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />

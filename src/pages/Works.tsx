@@ -37,7 +37,7 @@ export default function Works() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {works.map((work, index) => (
-            <WorkCard key={work.id} {...work} index={index} />
+            <WorkCard key={work.id} {...work} index={index} alt={work.alt} />
           ))}
         </div>
       </motion.div>

@@ -71,6 +71,14 @@ export default function Hero() {
     setIsDeletingTitle(false);
   }, [titleIndex]);
 
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "image";
+    link.href = "/Images/Sudipkc.jpg";
+    document.head.appendChild(link);
+  }, []);
+
   const handleHireMeClick = () => {
     const contactSection = document.getElementById("contact");
     if (contactSection) {
@@ -172,8 +180,9 @@ export default function Hero() {
               }}
             >
               <motion.img
-                src="/Images/Container right.jpg"
+                src="/Images/Container right.webp"
                 alt="Profile"
+                
                 className="rounded-full w-full h-full object-cover border-4 border-white dark:border-gray-800 shadow-xl"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
