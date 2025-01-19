@@ -13,7 +13,7 @@ export const works: Work[] = [
     id: 'Cook-it-Yourself',
     title: 'Cook it Yourself',
     description: 'The Recipe Sharing Website is a web-based platform where users can explore, share, and discover a wide variety of recipes. Users can add their own recipes, rate recipes shared by others, and bookmark their favorite ones. The website also includes an advanced search functionality, a recommendation system based on user preferences and ingredients, and nutritional value calculations for added recipes.',
-    image: "/Work_Images/CIY Page.webp",
+    image: "/Work_Images/CIY-Page.webp",
     alt: "Cook it Yourself website screenshot", 
     link: 'https://recipe-recommender-five.vercel.app/',
     tags: ['UI/UX', 'Figma', 'Design','React', 'Tailwind CSS', 'WebApp']

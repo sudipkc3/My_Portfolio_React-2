@@ -47,8 +47,8 @@ export default function SkillsList({ skills }: SkillsListProps) {
           whileHover={{ y: -5 }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="text-base md:text-lg font-semibold text-pink-600 dark:text-pink-500 mb-1 md:mb-2 flex items-center">
-            <span className="w-2 h-2 bg-pink-600 dark:bg-pink-500 rounded-full mr-2" />
+          <h3 className="text-base md:text-lg font-semibold text-purple-600 dark:text-purple-6600 mb-1 md:mb-2 flex items-center">
+            <span className="w-2 h-2 bg-purple-600 dark:bg-purple-500 rounded-full mr-2" />
             {skill.category}
           </h3>
           <ul className="space-y-1 md:space-y-2">

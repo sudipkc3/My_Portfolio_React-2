@@ -66,7 +66,7 @@ export default function Header() {
             onClick={() => handleNavClick('/')}
             className="text-2xl font-bold text-gray-900 dark:text-white"
           >
-            <img src="/Images/Logo.png" alt="Logo" className="h-8 w-auto" />
+            <h1 className="">Sudip KC</h1>
           </Link>
 
           <ul className="hidden md:flex items-center space-x-8">
@@ -102,6 +102,7 @@ export default function Header() {
               className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               whileHover={{ scale: 1.1, rotate: 180 }}
               whileTap={{ scale: 0.9 }}
+              aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
             >
               {isDarkMode ? (
                 <Sun className="w-5 h-5 text-gray-600 dark:text-gray-300" />
@@ -115,6 +116,7 @@ export default function Header() {
               className="md:hidden p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              aria-label="Open sidebar"
             >
               <Menu className="w-5 h-5 text-gray-600 dark:text-gray-300" />
             </motion.button>
@@ -143,6 +145,7 @@ export default function Header() {
                 className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
+                aria-label="Close sidebar"
               >
                 <X className="w-5 h-5 text-gray-600 dark:text-gray-300" />
               </motion.button>

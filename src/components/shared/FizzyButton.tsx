@@ -44,11 +44,11 @@ const FizzyButtonComponent = () => {
           <motion.button
             whileHover={{
               scale: 1.1,
-              backgroundColor: "#AA336A",
+              backgroundColor: "#9333ea",
               color: "#fff",
             }}
             whileTap={{ scale: 0.95 }}
-            className="relative px-3 py-3 text-white text-sm font-medium uppercase bg-purple-950 rounded-full shadow-md"
+            className="relative px-3 py-3 text-white text-sm font-medium uppercase bg-blue-800 rounded-lg shadow-md"
           >
             {isOpen ? "Download CV" : (
               <motion.svg

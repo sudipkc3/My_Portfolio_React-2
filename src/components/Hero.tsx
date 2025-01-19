@@ -153,7 +153,7 @@ export default function Hero() {
               <div className="flex space-x-4 mt-4 md:mt-0">
                 <FizzyButton />
                 <button
-                  className="bg-purple-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-600 transition duration-300"
+                  className="bg-blue-800 text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-600 transition duration-300"
                   onClick={handleHireMeClick}
                 >
                   Hire Me
