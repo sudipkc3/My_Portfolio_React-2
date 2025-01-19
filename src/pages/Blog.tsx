@@ -5,6 +5,7 @@ import AnimatedText from '../components/shared/AnimatedText';
 import BlogCard from '../components/Blog/BlogCard';
 import LottieIcon from '../components/shared/LottieIcon';
 import backgroundAnimation from '../components/shared/Animation JSON/Background 01.json';
+import Pagination from '../components/shared/Pagination';
 
 interface BlogPost {
   id: string;
@@ -20,6 +21,18 @@ interface BlogPost {
 
 export default function Blog() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 9;
+  const totalPages = Math.ceil(posts.length / postsPerPage);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+  };
+
+  const currentPosts = posts.slice(
+    (currentPage - 1) * postsPerPage,
+    currentPage * postsPerPage
+  );
 
   useEffect(() => {
     const loadPosts = async () => {
@@ -75,11 +88,18 @@ export default function Blog() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.map((post, index) => (
+          {currentPosts.map((post, index) => (
             <BlogCard key={post.id} {...post} index={index} />
           ))}
         </div>
       </motion.div>
+      <div className="flex justify-center mt-8 pb-4">
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={handlePageChange}
+        />
+      </div>
     </div>
   );
 }
