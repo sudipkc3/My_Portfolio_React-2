@@ -95,31 +95,6 @@ export default function Services() {
         ]
       }
     },
-    // {
-    //   icon: Smartphone,
-    //   title: "Mobile Development",
-    //   description: "Developing cross-platform mobile applications for iOS and Android",
-    //   color: "from-orange-500 to-red-500",
-    //   details: {
-    //     overview: "Create engaging mobile experiences that work seamlessly across platforms. We specialize in building native and cross-platform applications that users love.",
-    //     features: [
-    //       "Native iOS and Android Development",
-    //       "Cross-Platform Solutions",
-    //       "UI/UX Implementation",
-    //       "Push Notifications",
-    //       "Offline Functionality",
-    //       "App Store Optimization"
-    //     ],
-    //     process: [
-    //       "Platform Strategy",
-    //       "UI/UX Design",
-    //       "Development",
-    //       "Testing and QA",
-    //       "App Store Submission",
-    //       "Maintenance and Updates"
-    //     ]
-    //   }
-    // },
     {
       icon: FileCode,
       title: "Documentation Service",
@@ -147,26 +122,28 @@ export default function Services() {
     },
     {
       icon: Presentation,
-      title: "Microsoft 360 Service",
-      description: "Providing comprehensive Microsoft 360 solutions for your business",
+      title: "Microsoft 365 Services",
+      description: "Providing comprehensive Microsoft 365 solutions for your business productivity needs",
       color: "from-pink-500 to-rose-500",
       details: {
-        overview: "Leverage the power of Microsoft 360 to enhance productivity and collaboration within your organization. We offer tailored solutions to meet your specific business needs.",
+        overview: "Unlock the full potential of Microsoft 365 to boost your business productivity and collaboration. Our solutions cover a wide range of essential tools to streamline your operations.",
         features: [
-          "Microsoft 365 Setup and Configuration",
-          "Email and Calendar Management",
-          "SharePoint and OneDrive Integration",
-          "Teams Collaboration Tools",
-          "Security and Compliance",
-          "Ongoing Support and Maintenance"
+          "Microsoft Word for Document Creation",
+          "Excel for Data Analysis and Reporting",
+          "PowerPoint for Engaging Presentations",
+          "Outlook for Email and Calendar Management",
+          "OneNote for Efficient Note-Taking",
+          "Teams for Seamless Communication and Collaboration",
+          "SharePoint and OneDrive for File Storage and Sharing",
+          "Security and Compliance Features"
         ],
         process: [
-          "Needs Assessment",
-          "Solution Design",
-          "Implementation",
-          "User Training",
-          "Monitoring and Support",
-          "Regular Updates and Maintenance"
+          "Requirement Analysis",
+          "Customized Solution Planning",
+          "Deployment and Configuration",
+          "User Training and Onboarding",
+          "Performance Monitoring and Support",
+          "Regular Updates and Optimization"
         ]
       }
     }
