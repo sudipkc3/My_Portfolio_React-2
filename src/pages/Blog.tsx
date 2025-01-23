@@ -60,9 +60,9 @@ export default function Blog() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-200 via-pink-300 to-purple-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 pt-2">
+    <div className="min-h-screen bg-gradient-to-r from-blue-200 via-pink-300 to-purple-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 pt-2 relative">
       <motion.div
-        className="container mx-auto px-6 py-6"
+        className="container mx-auto px-6 py-6 "
         variants={staggerContainer}
         initial="hidden"
         animate="visible"
@@ -99,6 +99,22 @@ export default function Blog() {
           totalPages={totalPages}
           onPageChange={handlePageChange}
         />
+      </div>
+      <div className="flex flex-col fixed bottom-4 right-4 p-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg w-32 z-50 animate-bounce ">
+        <a
+          href="https://sudipkc3.blogspot.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm font-bold text-pink-600 dark:text-blue-400"
+        >
+          For more Blogs:
+        </a>
+        <button
+          onClick={() => window.open('https://sudipkc3.blogspot.com/', '_blank')}
+          className="mt-2 px-2 py-1 bg-purple-500 text-white rounded"
+        >
+          Read here
+        </button>
       </div>
     </div>
   );
