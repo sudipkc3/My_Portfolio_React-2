@@ -111,7 +111,7 @@ export default function About() {
 
   return (
     <>
-      <section id="about" className="py-10 bg-gradient-to-r from-blue-200 via-pink-300 to-purple-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700">
+      <section id="about" className="py-16 bg-gradient-to-r from-blue-200 via-pink-300 to-purple-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700">
         <motion.div 
           className="container mx-auto px-4 md:px-8 lg:px-16 flex justify-center items-center"
           variants={staggerContainer}

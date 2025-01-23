@@ -7,6 +7,7 @@ import Services from '../components/Services/Services';
 import Portfolio from '../components/Projects/Portfolio';
 import Contact from '../components/Contact/Contact';
 import { staggerContainer } from '../utils/animations';
+import HBlog from '../components/Blog/HBlog';
 
 export default function Home() {
   const location = useLocation();
@@ -37,6 +38,7 @@ export default function Home() {
       <About />
       <Services />
       <Portfolio />
+      <HBlog />
       <Contact />
     </motion.div>
   );

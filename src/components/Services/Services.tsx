@@ -150,7 +150,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-r from-blue-200 via-pink-300 to-purple-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700">
+    <section id="services" className="py-14 bg-gradient-to-r from-blue-200 via-pink-300 to-purple-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700">
       <motion.div 
         className="container mx-auto px-6"
         variants={staggerContainer}

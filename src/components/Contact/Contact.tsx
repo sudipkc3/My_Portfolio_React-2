@@ -6,7 +6,7 @@ import { Mail, MessageSquare, Phone } from 'lucide-react';
 export default function Contact() {
 
   return (
-    <section id="contact" className="py-6 bg-gradient-to-r from-blue-200 via-pink-300 to-purple-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700">
+    <section id="contact" className="py-14 bg-gradient-to-r from-blue-200 via-pink-300 to-purple-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700">
       <div className="container mx-auto px-6">
         <motion.h2 
           className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-6"
