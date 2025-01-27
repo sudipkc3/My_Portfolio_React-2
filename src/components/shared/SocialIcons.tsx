@@ -57,7 +57,7 @@ const SocialIconCard: React.FC<SocialIconCardProps> = ({
         layout
         className="cursor-pointer"
       >
-        <Icon className="w-6 h-6 text-gray-600 dark:text-gray-400 transition-all duration-300" />
+        <Icon className="w-5 h-5 text-gray-600 dark:text-gray-400 transition-all duration-300 md:w-6 md:h-6" />
       </motion.div>
       {/* Popup */}
       <AnimatePresence>
@@ -72,22 +72,22 @@ const SocialIconCard: React.FC<SocialIconCardProps> = ({
             }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             layout
-            className="absolute left-1/2 bottom-8 -translate-x-1/2 bg-white rounded-lg shadow-lg p-4 transition-all duration-200 pointer-events-auto w-64"
+            className="absolute left-1/2 bottom-full mb-4 -translate-x-1/2 bg-white rounded-lg shadow-lg p-2 transition-all duration-200 pointer-events-auto w-56 md:w-64"
           >
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2 md:space-x-3">
               <img
                 src={profilePic}
                 alt={`${name} profile`}
-                className="w-16 h-16 rounded-full border-2 border-purple-300 animate-glow"
+                className="w-12 h-12 rounded-full border-2 border-purple-300 animate-glow md:w-16 md:h-16"
               />
               <div className="flex flex-col">
-                <h3 className="text-lg font-semibold">{name}</h3>
-                <p className="text-sm text-gray-500">@{username}</p>
+                <h3 className="text-md font-semibold md:text-lg">{name}</h3>
+                <p className="text-xs text-gray-500 md:text-sm">@{username}</p>
                 <a
                   href={profileLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-2xl shadow-lg hover:from-purple-500 hover:to-pink-500 transition-transform transform hover:scale-105 animate-glow"
+                  className="mt-1 px-3 py-1 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-lg shadow-lg hover:from-purple-500 hover:to-pink-500 transition-transform transform hover:scale-105 animate-glow md:mt-2 md:px-4 md:py-2"
                 >
                   Visit Profile
                 </a>

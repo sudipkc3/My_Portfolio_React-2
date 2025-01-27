@@ -20,7 +20,7 @@ export default function Home() {
       if (element) {
         setTimeout(() => {
           element.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
+        }, 800);
       }
       // Clear the state to prevent unwanted scrolling
       window.history.replaceState({}, document.title);
