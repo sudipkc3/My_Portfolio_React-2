@@ -52,7 +52,7 @@ const zigzagVariants = {
 const SkillsIcon = () => {
   return (
     <>
-      <div className="bg-gradient-to-r from-blue-200 via-pink-300 to-purple-200 dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-700 text-gray-900 dark:text-gray-100 p-2">
+      <div className="bg-gradient-to-r from-blue-200 via-pink-200 to-purple-200 dark:from-gray-900 dark:via-zinc-900 dark:to-gray-700 text-gray-700 dark:text-gray-100 p-2">
         <SectionTitle
           title="My Toolstack"
         />
