@@ -6,7 +6,7 @@ import { fadeIn, staggerContainer } from '../../utils/animations';
 import AnimatedText from '../shared/AnimatedText';
 import Lottie from 'lottie-react';
 import animationData from '../shared/Animation JSON/Here Arrow.json';
-import AnimatedMarquee from './AnimatedMarquee';
+import SkillsIcon from './SkillsIcon';
 
 export default function About() {
   const [activeTab, setActiveTab] = useState('skills');
@@ -76,33 +76,6 @@ export default function About() {
             'AI for All Certification',
             'Project Management Course',
             'Html/CSS/JS Certification'
-          ]
-        }
-      ]
-    },
-    tools: {
-      content: [
-        {
-          category: 'Design Tools',
-          items: [
-            'Adobe XD',
-            'Figma',
-            'Photoshop',
-            'Illustrator',
-            'Sketch',
-            'InVision'
-          ]
-        },
-        {
-          category: 'Development Tools',
-          items: [
-            'VS Code',
-            'Git & GitHub',
-            'Terminal',
-            'HTML/CSS/JS',
-            'AI',
-            'Microsoft Office'
-
           ]
         }
       ]
@@ -185,7 +158,7 @@ export default function About() {
           </div>
         </motion.div>
       </section>
-      <AnimatedMarquee />
+      <SkillsIcon />
     </>
   );
 }
