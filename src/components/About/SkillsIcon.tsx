@@ -52,12 +52,12 @@ const zigzagVariants = {
 const SkillsIcon = () => {
   return (
     <>
-      <div className="bg-gradient-to-r from-blue-200 via-pink-200 to-purple-200 dark:from-gray-900 dark:via-zinc-900 dark:to-gray-700 text-gray-700 dark:text-gray-100 p-2">
+      <div className="bg-gradient-to-r from-blue-200 via-pink-200 to-purple-200 dark:from-gray-900 dark:via-zinc-900 dark:to-gray-700 p-2">
         <SectionTitle
           title="My Toolstack"
         />
-        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 p-2 items-center justify-center">
-          {icons.slice(0, 12).map((icon, index) => (
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 p-2 items-center justify-center">
+          {icons.map((icon, index) => (
             <div key={icon.alt} className="flex flex-col items-center">
               <motion.img
                 src={icon.src}
@@ -69,7 +69,7 @@ const SkillsIcon = () => {
                 whileHover="hover"
                 variants={zigzagVariants}
               />
-              <span className="mt-2 text-lg text-gray-900 dark:text-gray-100">
+              <span className="mt-2 text-xl text-black dark:text-gray-100">
                 {icon.name}
               </span>
             </div>
