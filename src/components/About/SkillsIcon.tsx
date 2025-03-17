@@ -32,52 +32,60 @@ const icons = [
   { src: VSCodeIcon, alt: "VSCode", name: "VSCode" },
 ];
 
-const zigzagVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
+// Framer Motion animation settings
+const carouselVariants = {
+  animate: {
+    x: ["0%", "-50%"], // Moves left by half of its total width
     transition: {
-      delay: i * 0.1,
-    },
-  }),
-  hover: {
-    scale: 1.2,
-    transition: {
-      yoyo: Infinity,
+      x: {
+        repeat: Infinity,
+        repeatType: "loop",
+        duration: 20,
+        ease: "linear",
+      },
     },
   },
 };
 
-const SkillsIcon = () => {
+const InfiniteCarousel = () => {
   return (
-    <>
-      <div className="bg-gradient-to-r from-blue-200 via-pink-200 to-purple-200 dark:from-gray-900 dark:via-zinc-900 dark:to-gray-700 p-2">
-        <SectionTitle
-          title="My Toolstack"
-        />
-        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 p-2 items-center justify-center">
-          {icons.map((icon, index) => (
-            <div key={icon.alt} className="flex flex-col items-center">
-              <motion.img
-                src={icon.src}
-                alt={icon.alt}
-                className="w-10 h-10"
-                custom={index}
-                initial="hidden"
-                animate="visible"
-                whileHover="hover"
-                variants={zigzagVariants}
-              />
-              <span className="mt-2 text-xl text-black dark:text-gray-100">
-                {icon.name}
-              </span>
-            </div>
-          ))}
+    <div className="relative w-full overflow-hidden py-6 bg-gray-100 dark:bg-gray-900">
+      <SectionTitle title="My Toolstack" />
+      
+      <div className="relative max-w-[960px] mx-auto overflow-hidden">
+        {/* Fading Gradient (Left) */}
+        <div className="absolute left-0 top-0 h-full w-10 bg-gradient-to-r from-gray-100 dark:from-gray-900 to-transparent z-10"></div>
+        
+        {/* Carousel Track */}
+        <div className="flex w-full overflow-hidden">
+          <motion.div
+            className="flex w-max"
+            variants={carouselVariants}
+            animate="animate"
+          >
+            {[...icons, ...icons].map((icon, index) => ( // Duplicate for seamless looping
+              <div key={index} className="flex flex-col items-center w-[100px]">
+                <motion.img
+                  src={icon.src}
+                  alt={icon.alt}
+                  className="w-[50px] h-[50px]"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                />
+                <span className="mt-2 text-sm text-black dark:text-gray-100">
+                  {icon.name}
+                </span>
+              </div>
+            ))}
+          </motion.div>
         </div>
+
+        {/* Fading Gradient (Right) */}
+        <div className="absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-gray-100 dark:from-gray-900 to-transparent z-10"></div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default SkillsIcon;
+export default InfiniteCarousel;
